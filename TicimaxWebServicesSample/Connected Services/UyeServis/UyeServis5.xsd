@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://cagla.tcmx.dev/servis/UyeServis.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:import schemaLocation="http://cagla.tcmx.dev/servis/UyeServis.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GirisYap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ug" nillable="true" type="q1:UyeGirisi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GirisYapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GirisYapResult" nillable="true" type="q2:UyeGirisiSonuc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeler">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="filtre" nillable="true" type="q3:UyeFiltre" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="sayfalama" nillable="true" type="q4:UyeSayfalama" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyelerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SelectUyelerResult" nillable="true" type="q5:ArrayOfUye" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeIdByMailOrTel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uyeMail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeIdByMailOrTelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectUyeIdByMailOrTelResult" nillable="true" type="q6:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUye">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="u" nillable="true" type="q7:Uye" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ayar" nillable="true" type="q8:UyeAyar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUyeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUyeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeAdres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adresId" type="xs:int" />
+        <xs:element minOccurs="0" name="uyeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeAdresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SelectUyeAdresResult" nillable="true" type="q9:ArrayOfUyeAdres" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUyeAdres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="adres" nillable="true" type="q10:UyeAdres" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUyeAdresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUyeAdresResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeTuru">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uyeTuruId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeTuruResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SelectUyeTuruResult" nillable="true" type="q11:ArrayOfUyeTuru" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUyeTuru">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="u" nillable="true" type="q12:UyeTuru" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUyeTuruResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUyeTuruResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUye">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uyeId" type="xs:int" />
+        <xs:element minOccurs="0" name="mailAdresi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUyeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="DeleteUyeResult" nillable="true" type="q13:UyeSilResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeIzinGecmisi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UyeKodu" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="filtre" nillable="true" type="q14:UyeIzinGecmisiFiltre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUyeIzinGecmisiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="SelectUyeIzinGecmisiResult" nillable="true" type="q15:UyeIzinGecmisiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

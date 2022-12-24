@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Entegrasyon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlanDeger" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deger" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntegrasyonKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TabloAlan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entegrasyon" nillable="true" type="tns:Entegrasyon" />
+  <xs:complexType name="ArrayOfMailList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailList" nillable="true" type="tns:MailList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailList" nillable="true" type="tns:ArrayOfMailList" />
+  <xs:complexType name="MailList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailList" nillable="true" type="tns:MailList" />
+  <xs:complexType name="ArrayOfEntegrasyon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Entegrasyon" nillable="true" type="tns:Entegrasyon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntegrasyon" nillable="true" type="tns:ArrayOfEntegrasyon" />
+  <xs:complexType name="KargoDesiFiyatSelectRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FiltreKargoID" type="xs:int" />
+      <xs:element minOccurs="0" name="FiltreSehirID" type="xs:int" />
+      <xs:element minOccurs="0" name="FiltreUlkeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoDesiFiyatSelectRequest" nillable="true" type="tns:KargoDesiFiyatSelectRequest" />
+  <xs:complexType name="KargoDesiFiyatSelectResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KargoDesiFiyatListesi" nillable="true" type="tns:ArrayOfKargoDesiFiyat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoDesiFiyatSelectResponse" nillable="true" type="tns:KargoDesiFiyatSelectResponse" />
+  <xs:complexType name="ArrayOfKargoDesiFiyat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KargoDesiFiyat" nillable="true" type="tns:KargoDesiFiyat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKargoDesiFiyat" nillable="true" type="tns:ArrayOfKargoDesiFiyat" />
+  <xs:complexType name="KargoDesiFiyat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DesiBas" type="xs:double" />
+      <xs:element minOccurs="0" name="DesiSon" type="xs:double" />
+      <xs:element minOccurs="0" name="Fiyat" type="xs:double" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="KargoID" type="xs:int" />
+      <xs:element minOccurs="0" name="SehirAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SehirID" type="xs:int" />
+      <xs:element minOccurs="0" name="SehirIci" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UlkeAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UlkeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoDesiFiyat" nillable="true" type="tns:KargoDesiFiyat" />
+  <xs:complexType name="KargoDesiFiyatGuncelleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KargoDesiFiyatBilgisi" nillable="true" type="tns:KargoDesiFiyatBilgisi" />
+      <xs:element minOccurs="0" name="KargoKapsami" type="xs:int" />
+      <xs:element minOccurs="0" name="SadeceSehirIcineGonderim" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UlkeBelirle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UlkeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoDesiFiyatGuncelleRequest" nillable="true" type="tns:KargoDesiFiyatGuncelleRequest" />
+  <xs:complexType name="KargoDesiFiyatBilgisi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DesiBas" type="xs:double" />
+      <xs:element minOccurs="0" name="DesiSon" type="xs:double" />
+      <xs:element minOccurs="0" name="Fiyat" type="xs:double" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="KargoID" type="xs:int" />
+      <xs:element minOccurs="0" name="SehirID" type="xs:int" />
+      <xs:element minOccurs="0" name="SehirIci" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UlkeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoDesiFiyatBilgisi" nillable="true" type="tns:KargoDesiFiyatBilgisi" />
+  <xs:complexType name="SelectUlkeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FiltreUlkeID" type="xs:int" />
+      <xs:element minOccurs="0" name="FiltreUlkeKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectUlkeRequest" nillable="true" type="tns:SelectUlkeRequest" />
+  <xs:complexType name="ArrayOfKargoUlke">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KargoUlke" nillable="true" type="tns:KargoUlke" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKargoUlke" nillable="true" type="tns:ArrayOfKargoUlke" />
+  <xs:complexType name="KargoUlke">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoUlke" nillable="true" type="tns:KargoUlke" />
+  <xs:complexType name="SelectIlRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FiltreIlID" type="xs:int" />
+      <xs:element minOccurs="0" name="FiltreUlkeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectIlRequest" nillable="true" type="tns:SelectIlRequest" />
+  <xs:complexType name="ArrayOfKargoIl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KargoIl" nillable="true" type="tns:KargoIl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKargoIl" nillable="true" type="tns:ArrayOfKargoIl" />
+  <xs:complexType name="KargoIl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UlkeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoIl" nillable="true" type="tns:KargoIl" />
+  <xs:complexType name="SelectIlceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FiltreIlID" type="xs:int" />
+      <xs:element minOccurs="0" name="FiltreIlceID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectIlceRequest" nillable="true" type="tns:SelectIlceRequest" />
+  <xs:complexType name="ArrayOfKargoIlce">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KargoIlce" nillable="true" type="tns:KargoIlce" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKargoIlce" nillable="true" type="tns:ArrayOfKargoIlce" />
+  <xs:complexType name="KargoIlce">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ILID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoIlce" nillable="true" type="tns:KargoIlce" />
+  <xs:complexType name="ArrayOfKargoFirma">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KargoFirma" nillable="true" type="tns:KargoFirma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKargoFirma" nillable="true" type="tns:ArrayOfKargoFirma" />
+  <xs:complexType name="KargoFirma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KargoFirma" nillable="true" type="tns:KargoFirma" />
+  <xs:complexType name="WebIadeTalepSelectRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Filtre" nillable="true" type="tns:IadeTalepFiltre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebIadeTalepSelectRequest" nillable="true" type="tns:WebIadeTalepSelectRequest" />
+  <xs:complexType name="IadeTalepFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DurumID" type="xs:int" />
+      <xs:element minOccurs="0" name="EklemeTarihi1" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EklemeTarihi2" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaIadeTipi" type="xs:int" />
+      <xs:element minOccurs="0" name="SiparisID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IadeTalepFiltre" nillable="true" type="tns:IadeTalepFiltre" />
+  <xs:complexType name="WebIadeTalepResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IadeTalepList" nillable="true" type="tns:ArrayOfIadeTalep" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebIadeTalepResponse" nillable="true" type="tns:WebIadeTalepResponse" />
+  <xs:complexType name="ArrayOfIadeTalep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IadeTalep" nillable="true" type="tns:IadeTalep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIadeTalep" nillable="true" type="tns:ArrayOfIadeTalep" />
+  <xs:complexType name="IadeTalep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cevap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CevapTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Cevaplayan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CevaplayanID" type="xs:int" />
+      <xs:element minOccurs="0" name="Durum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DurumID" type="xs:int" />
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Notlar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParaIadeTipi" type="xs:int" />
+      <xs:element minOccurs="0" name="SiparisID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IadeTalep" nillable="true" type="tns:IadeTalep" />
+  <xs:complexType name="WebIadeTalepGuncelleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MailGonder" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Talep" nillable="true" type="tns:IadeTalep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebIadeTalepGuncelleRequest" nillable="true" type="tns:WebIadeTalepGuncelleRequest" />
+  <xs:complexType name="WebTaksitSecenekRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaksTaksitSayisi" type="xs:int" />
+      <xs:element minOccurs="0" name="Tutar" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebTaksitSecenekRequest" nillable="true" type="tns:WebTaksitSecenekRequest" />
+  <xs:complexType name="WebTaksitSecenekResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TaksitSecenekleri" nillable="true" type="tns:ArrayOfWebTaksitBanka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebTaksitSecenekResponse" nillable="true" type="tns:WebTaksitSecenekResponse" />
+  <xs:complexType name="ArrayOfWebTaksitBanka">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebTaksitBanka" nillable="true" type="tns:WebTaksitBanka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebTaksitBanka" nillable="true" type="tns:ArrayOfWebTaksitBanka" />
+  <xs:complexType name="WebTaksitBanka">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankaAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Taksitler" nillable="true" type="tns:ArrayOfWebTaksitSecenek" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebTaksitBanka" nillable="true" type="tns:WebTaksitBanka" />
+  <xs:complexType name="ArrayOfWebTaksitSecenek">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebTaksitSecenek" nillable="true" type="tns:WebTaksitSecenek" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebTaksitSecenek" nillable="true" type="tns:ArrayOfWebTaksitSecenek" />
+  <xs:complexType name="WebTaksitSecenek">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TaksitSayisi" type="xs:int" />
+      <xs:element minOccurs="0" name="TaksitTanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaksitTutari" type="xs:double" />
+      <xs:element minOccurs="0" name="ToplamTutar" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebTaksitSecenek" nillable="true" type="tns:WebTaksitSecenek" />
+  <xs:complexType name="ArrayOfWebKampanya">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebKampanya" nillable="true" type="tns:WebKampanya" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebKampanya" nillable="true" type="tns:ArrayOfWebKampanya" />
+  <xs:complexType name="WebKampanya">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet1" type="xs:int" />
+      <xs:element minOccurs="0" name="Adet2" type="xs:int" />
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BankaID" type="xs:int" />
+      <xs:element minOccurs="0" name="BaslangicTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BitisTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExtJsonData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HedefEtiketID" type="xs:int" />
+      <xs:element minOccurs="0" name="HedefKategoriID" type="xs:int" />
+      <xs:element minOccurs="0" name="HedefUrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="HediyeCekiKategoriID" type="xs:int" />
+      <xs:element minOccurs="0" name="HediyeCekiKullanimBaslangicTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HediyeCekiKullanimBitisTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IndirimliUrunIslemDegeri" type="xs:double" />
+      <xs:element minOccurs="0" name="IslemDegeri" type="xs:double" />
+      <xs:element minOccurs="0" name="IslemTipi" type="xs:int" />
+      <xs:element minOccurs="0" name="KampanyaTuru" type="xs:int" />
+      <xs:element minOccurs="0" name="OdemeTipi" type="xs:int" />
+      <xs:element minOccurs="0" name="Sablon" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SepetTutari" type="xs:double" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TekrarTutari" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunID1" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunID2" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeMaksKullanimSayisi" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebKampanya" nillable="true" type="tns:WebKampanya" />
+  <xs:complexType name="GetFavoriUrunlerRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KayitSayisi" type="xs:int" />
+      <xs:element minOccurs="0" name="SayfaNo" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetFavoriUrunlerRequest" nillable="true" type="tns:GetFavoriUrunlerRequest" />
+  <xs:complexType name="GetFavoriUrunlerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Urunler" nillable="true" type="tns:ArrayOfWebFavoriUrunler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetFavoriUrunlerResponse" nillable="true" type="tns:GetFavoriUrunlerResponse" />
+  <xs:complexType name="ArrayOfWebFavoriUrunler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebFavoriUrunler" nillable="true" type="tns:WebFavoriUrunler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebFavoriUrunler" nillable="true" type="tns:ArrayOfWebFavoriUrunler" />
+  <xs:complexType name="WebFavoriUrunler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FavoriUrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StokKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToplamStokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunFiyati" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunFiyatiKdv" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunSayisi" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+      <xs:element minOccurs="0" name="VaryasyonSayisi" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebFavoriUrunler" nillable="true" type="tns:WebFavoriUrunler" />
+  <xs:complexType name="AddFavoriUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddFavoriUrunRequest" nillable="true" type="tns:AddFavoriUrunRequest" />
+  <xs:complexType name="AddFavoriUrunResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddFavoriUrunResponse" nillable="true" type="tns:AddFavoriUrunResponse" />
+  <xs:complexType name="RemoveFavoriUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FavoriUrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveFavoriUrunRequest" nillable="true" type="tns:RemoveFavoriUrunRequest" />
+  <xs:complexType name="RemoveFavoriUrunResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveFavoriUrunResponse" nillable="true" type="tns:RemoveFavoriUrunResponse" />
+  <xs:complexType name="GetFiyatAlarmUrunlerRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetFiyatAlarmUrunlerRequest" nillable="true" type="tns:GetFiyatAlarmUrunlerRequest" />
+  <xs:complexType name="GetFiyatAlarmUrunlerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Urunler" nillable="true" type="tns:ArrayOfWebFiyatAlarmUrunler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetFiyatAlarmUrunlerResponse" nillable="true" type="tns:GetFiyatAlarmUrunlerResponse" />
+  <xs:complexType name="ArrayOfWebFiyatAlarmUrunler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebFiyatAlarmUrunler" nillable="true" type="tns:WebFiyatAlarmUrunler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebFiyatAlarmUrunler" nillable="true" type="tns:ArrayOfWebFiyatAlarmUrunler" />
+  <xs:complexType name="WebFiyatAlarmUrunler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EklenenFiyat" type="xs:double" />
+      <xs:element minOccurs="0" name="FiyatAlarmUrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StokKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToplamStokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunFiyati" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunFiyatiKdv" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+      <xs:element minOccurs="0" name="VaryasyonSayisi" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebFiyatAlarmUrunler" nillable="true" type="tns:WebFiyatAlarmUrunler" />
+  <xs:complexType name="AddFiyatAlarmUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fiyat" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddFiyatAlarmUrunRequest" nillable="true" type="tns:AddFiyatAlarmUrunRequest" />
+  <xs:complexType name="AddFiyatAlarmUrunResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddFiyatAlarmUrunResponse" nillable="true" type="tns:AddFiyatAlarmUrunResponse" />
+  <xs:complexType name="RemoveFiyatAlarmUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FiyatAlarmUrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveFiyatAlarmUrunRequest" nillable="true" type="tns:RemoveFiyatAlarmUrunRequest" />
+  <xs:complexType name="RemoveFiyatAlarmUrunResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveFiyatAlarmUrunResponse" nillable="true" type="tns:RemoveFiyatAlarmUrunResponse" />
+  <xs:complexType name="GetStokAlarmUrunlerRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetStokAlarmUrunlerRequest" nillable="true" type="tns:GetStokAlarmUrunlerRequest" />
+  <xs:complexType name="GetStokAlarmUrunlerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Urunler" nillable="true" type="tns:ArrayOfWebStokAlarmUrunler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetStokAlarmUrunlerResponse" nillable="true" type="tns:GetStokAlarmUrunlerResponse" />
+  <xs:complexType name="ArrayOfWebStokAlarmUrunler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebStokAlarmUrunler" nillable="true" type="tns:WebStokAlarmUrunler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebStokAlarmUrunler" nillable="true" type="tns:ArrayOfWebStokAlarmUrunler" />
+  <xs:complexType name="WebStokAlarmUrunler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ParaBirimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StokAlarmUrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="StokKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToplamStokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunFiyati" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunFiyatiKdv" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+      <xs:element minOccurs="0" name="VaryasyonSayisi" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebStokAlarmUrunler" nillable="true" type="tns:WebStokAlarmUrunler" />
+  <xs:complexType name="AddStokAlarmUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fiyat" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddStokAlarmUrunRequest" nillable="true" type="tns:AddStokAlarmUrunRequest" />
+  <xs:complexType name="AddStokAlarmUrunResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddStokAlarmUrunResponse" nillable="true" type="tns:AddStokAlarmUrunResponse" />
+  <xs:complexType name="RemoveStokAlarmUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StokAlarmUrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveStokAlarmUrunRequest" nillable="true" type="tns:RemoveStokAlarmUrunRequest" />
+  <xs:complexType name="RemoveStokAlarmUrunResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveStokAlarmUrunResponse" nillable="true" type="tns:RemoveStokAlarmUrunResponse" />
+  <xs:complexType name="GetMenuRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMenuRequest" nillable="true" type="tns:GetMenuRequest" />
+  <xs:complexType name="GetMenuResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Menuler" nillable="true" type="tns:ArrayOfWebMenu" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetMenuResponse" nillable="true" type="tns:GetMenuResponse" />
+  <xs:complexType name="WebServisResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServisResponse" nillable="true" type="tns:WebServisResponse" />
+  <xs:complexType name="ArrayOfWebMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebMenu" nillable="true" type="tns:WebMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebMenu" nillable="true" type="tns:ArrayOfWebMenu" />
+  <xs:complexType name="WebMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Baslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BitisTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Icerik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PID" type="xs:int" />
+      <xs:element minOccurs="0" name="Resim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimTargetUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimYolu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="Target" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tip" type="xs:int" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebMenu" nillable="true" type="tns:WebMenu" />
+  <xs:complexType name="SaveMenuRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Menuler" nillable="true" type="tns:ArrayOfWebMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveMenuRequest" nillable="true" type="tns:SaveMenuRequest" />
+  <xs:complexType name="SaveMenuResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveMenuResponse" nillable="true" type="tns:SaveMenuResponse" />
+  <xs:complexType name="DeleteMenuRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Menuler" nillable="true" type="tns:ArrayOfWebMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteMenuRequest" nillable="true" type="tns:DeleteMenuRequest" />
+  <xs:complexType name="DeleteMenuResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteMenuResponse" nillable="true" type="tns:DeleteMenuResponse" />
+  <xs:complexType name="ServisSaveSupportTicketRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Baslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cevaplayan" type="xs:int" />
+      <xs:element minOccurs="0" name="KonuId" type="xs:int" />
+      <xs:element minOccurs="0" name="Mesaj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisSaveSupportTicketRequest" nillable="true" type="tns:ServisSaveSupportTicketRequest" />
+  <xs:complexType name="ServisSaveSupportTicketResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisSaveSupportTicketResponse" nillable="true" type="tns:ServisSaveSupportTicketResponse" />
+  <xs:complexType name="ServisGetSupportTicketSubjectsRequest">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="ServisGetSupportTicketSubjectsRequest" nillable="true" type="tns:ServisGetSupportTicketSubjectsRequest" />
+  <xs:complexType name="ServisGetSupportTicketSubjectsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Subjects" nillable="true" type="tns:ArrayOfServisSupportTicketSubject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisGetSupportTicketSubjectsResponse" nillable="true" type="tns:ServisGetSupportTicketSubjectsResponse" />
+  <xs:complexType name="ArrayOfServisSupportTicketSubject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServisSupportTicketSubject" nillable="true" type="tns:ServisSupportTicketSubject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServisSupportTicketSubject" nillable="true" type="tns:ArrayOfServisSupportTicketSubject" />
+  <xs:complexType name="ServisSupportTicketSubject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KonuId" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisSupportTicketSubject" nillable="true" type="tns:ServisSupportTicketSubject" />
+  <xs:complexType name="ServisSaveSupportTicketAnswerRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestekId" type="xs:int" />
+      <xs:element minOccurs="0" name="Mesaj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisSaveSupportTicketAnswerRequest" nillable="true" type="tns:ServisSaveSupportTicketAnswerRequest" />
+  <xs:complexType name="ServisSaveSupportTicketAnswerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisSaveSupportTicketAnswerResponse" nillable="true" type="tns:ServisSaveSupportTicketAnswerResponse" />
+  <xs:complexType name="ServisGetSupportTicketsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestekId" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisGetSupportTicketsRequest" nillable="true" type="tns:ServisGetSupportTicketsRequest" />
+  <xs:complexType name="ServisGetSupportTicketsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestekTalepleri" nillable="true" type="tns:ArrayOfServisMusteriTalep" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisGetSupportTicketsResponse" nillable="true" type="tns:ServisGetSupportTicketsResponse" />
+  <xs:complexType name="ArrayOfServisMusteriTalep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServisMusteriTalep" nillable="true" type="tns:ServisMusteriTalep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServisMusteriTalep" nillable="true" type="tns:ArrayOfServisMusteriTalep" />
+  <xs:complexType name="ServisMusteriTalep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cozuldu" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Durum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DurumID" type="xs:int" />
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="KapatilmaTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Konu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KonuID" type="xs:int" />
+      <xs:element minOccurs="0" name="Mesaj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SorumluAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SorumluID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisMusteriTalep" nillable="true" type="tns:ServisMusteriTalep" />
+  <xs:complexType name="ServisGetSupportTicketMessagesRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestekId" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisGetSupportTicketMessagesRequest" nillable="true" type="tns:ServisGetSupportTicketMessagesRequest" />
+  <xs:complexType name="ServisGetSupportTicketMessagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestekMesajlari" nillable="true" type="tns:ArrayOfServisMusteriCevap" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisGetSupportTicketMessagesResponse" nillable="true" type="tns:ServisGetSupportTicketMessagesResponse" />
+  <xs:complexType name="ArrayOfServisMusteriCevap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServisMusteriCevap" nillable="true" type="tns:ServisMusteriCevap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServisMusteriCevap" nillable="true" type="tns:ArrayOfServisMusteriCevap" />
+  <xs:complexType name="ServisMusteriCevap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cevap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cevaplayan" type="xs:int" />
+      <xs:element minOccurs="0" name="CevaplayanStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="KonusmaTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TalepID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServisMusteriCevap" nillable="true" type="tns:ServisMusteriCevap" />
+  <xs:complexType name="GetCampaingBannersRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CampaingBannerId" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCampaingBannersRequest" nillable="true" type="tns:GetCampaingBannersRequest" />
+  <xs:complexType name="GetCampaingBannersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CampaingBanners" nillable="true" type="tns:ArrayOfCampaingBannerList" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCampaingBannersResponse" nillable="true" type="tns:GetCampaingBannersResponse" />
+  <xs:complexType name="ArrayOfCampaingBannerList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampaingBannerList" nillable="true" type="tns:CampaingBannerList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampaingBannerList" nillable="true" type="tns:ArrayOfCampaingBannerList" />
+  <xs:complexType name="CampaingBannerList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BannetTypeText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandId" type="xs:int" />
+      <xs:element minOccurs="0" name="CampaingBannerId" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountDownActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CountDownDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Definitions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="StrCountDownDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaingBannerList" nillable="true" type="tns:CampaingBannerList" />
+</xs:schema>

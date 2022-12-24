@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UyeServis" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cagla2.ticimax.biz/Servis/UyeServis.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cagla2.ticimax.biz/Servis/UyeServis.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cagla2.ticimax.biz/Servis/UyeServis.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://cagla2.ticimax.biz/Servis/UyeServis.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUyeServis_GirisYap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GirisYap" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_GirisYap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GirisYapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SelectUyeler_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUyeler" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SelectUyeler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUyelerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SaveUye_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUye" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SaveUye_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUyeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SelectUyeAdres_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUyeAdres" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SelectUyeAdres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUyeAdresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SaveUyeAdres_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUyeAdres" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SaveUyeAdres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUyeAdresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SelectUyeTuru_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUyeTuru" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SelectUyeTuru_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUyeTuruResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SaveUyeTuru_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUyeTuru" />
+  </wsdl:message>
+  <wsdl:message name="IUyeServis_SaveUyeTuru_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUyeTuruResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUyeServis">
+    <wsdl:operation name="GirisYap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUyeServis/GirisYap" message="tns:IUyeServis_GirisYap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUyeServis/GirisYapResponse" message="tns:IUyeServis_GirisYap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUyeler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUyeServis/SelectUyeler" message="tns:IUyeServis_SelectUyeler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUyeServis/SelectUyelerResponse" message="tns:IUyeServis_SelectUyeler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUye">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUyeServis/SaveUye" message="tns:IUyeServis_SaveUye_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUyeServis/SaveUyeResponse" message="tns:IUyeServis_SaveUye_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUyeAdres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUyeServis/SelectUyeAdres" message="tns:IUyeServis_SelectUyeAdres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUyeServis/SelectUyeAdresResponse" message="tns:IUyeServis_SelectUyeAdres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUyeAdres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUyeServis/SaveUyeAdres" message="tns:IUyeServis_SaveUyeAdres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUyeServis/SaveUyeAdresResponse" message="tns:IUyeServis_SaveUyeAdres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUyeTuru">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUyeServis/SelectUyeTuru" message="tns:IUyeServis_SelectUyeTuru_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUyeServis/SelectUyeTuruResponse" message="tns:IUyeServis_SelectUyeTuru_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUyeTuru">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUyeServis/SaveUyeTuru" message="tns:IUyeServis_SaveUyeTuru_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUyeServis/SaveUyeTuruResponse" message="tns:IUyeServis_SaveUyeTuru_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUyeServis" type="tns:IUyeServis">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GirisYap">
+      <soap:operation soapAction="http://tempuri.org/IUyeServis/GirisYap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUyeler">
+      <soap:operation soapAction="http://tempuri.org/IUyeServis/SelectUyeler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUye">
+      <soap:operation soapAction="http://tempuri.org/IUyeServis/SaveUye" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUyeAdres">
+      <soap:operation soapAction="http://tempuri.org/IUyeServis/SelectUyeAdres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUyeAdres">
+      <soap:operation soapAction="http://tempuri.org/IUyeServis/SaveUyeAdres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUyeTuru">
+      <soap:operation soapAction="http://tempuri.org/IUyeServis/SelectUyeTuru" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUyeTuru">
+      <soap:operation soapAction="http://tempuri.org/IUyeServis/SaveUyeTuru" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UyeServis">
+    <wsdl:port name="BasicHttpBinding_IUyeServis" binding="tns:BasicHttpBinding_IUyeServis">
+      <soap:address location="http://cagla2.ticimax.biz/Servis/UyeServis.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

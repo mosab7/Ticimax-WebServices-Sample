@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UrunServis" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ticimax.BL" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUrunServis_SelectKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKategori" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKategoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKategori" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKategoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveKategoriParent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKategoriParent" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveKategoriParent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKategoriParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteKategori" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteKategoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateKategoriDil_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKategoriDil" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateKategoriDil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKategoriDilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectMarka_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMarka" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectMarka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMarkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveMarka_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMarka" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveMarka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMarkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteMarka_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarka" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteMarka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTedarikci_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTedarikci" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTedarikci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTedarikciResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTedarikci_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTedarikci" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTedarikci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTedarikciResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteTedarikci_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTedarikci" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteTedarikci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTedarikciResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectEtiket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEtiket" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectEtiket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEtiketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveEtiket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEtiket" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveEtiket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEtiketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectParaBirimi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectParaBirimi" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectParaBirimi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectParaBirimiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveParaBirimi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveParaBirimi" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveParaBirimi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveParaBirimiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTeknikDetayGrup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTeknikDetayGrup" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTeknikDetayGrup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTeknikDetayGrupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTeknikDetayGrup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeknikDetayGrup" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTeknikDetayGrup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeknikDetayGrupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateTeknikDetayGrupDil_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeknikDetayGrupDil" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateTeknikDetayGrupDil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeknikDetayGrupDilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTeknikDetayOzellik_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTeknikDetayOzellik" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTeknikDetayOzellik_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTeknikDetayOzellikResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTeknikDetayOzellik_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeknikDetayOzellik" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTeknikDetayOzellik_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeknikDetayOzellikResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateTeknikDetayOzellikDil_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeknikDetayOzellikDil" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateTeknikDetayOzellikDil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeknikDetayOzellikDilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTeknikDetayDeger_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTeknikDetayDeger" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTeknikDetayDeger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTeknikDetayDegerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTeknikDetayDeger_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeknikDetayDeger" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTeknikDetayDeger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTeknikDetayDegerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateTeknikDetayDegerDil_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeknikDetayDegerDil" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateTeknikDetayDegerDil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeknikDetayDegerDilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveAsortiGrup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAsortiGrup" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveAsortiGrup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAsortiGrupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectAsortiGrup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAsortiGrup" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectAsortiGrup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAsortiGrupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveAsortiMiktar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAsortiMiktar" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveAsortiMiktar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAsortiMiktarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectAsortiMiktar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAsortiMiktar" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectAsortiMiktar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAsortiMiktarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectEkSecenekGrup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEkSecenekGrup" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectEkSecenekGrup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEkSecenekGrupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateEkSecenekGrupDil_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEkSecenekGrupDil" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateEkSecenekGrupDil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEkSecenekGrupDilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectEkSecenekDeger_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEkSecenekDeger" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectEkSecenekDeger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEkSecenekDegerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateEkSecenekDegerDil_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEkSecenekDegerDil" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateEkSecenekDegerDil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEkSecenekDegerDilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunCount" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectVaryasyon_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVaryasyon" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectVaryasyon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVaryasyonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectVaryasyonCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVaryasyonCount" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectVaryasyonCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVaryasyonCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveVaryasyon_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVaryasyon" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveVaryasyon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVaryasyonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateUrunDil_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrunDil" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateUrunDil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrunDilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_StokAdediGuncelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:StokAdediGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_StokAdediGuncelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StokAdediGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_VaryasyonGuncelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:VaryasyonGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_VaryasyonGuncelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VaryasyonGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_OptimizeUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:OptimizeUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_OptimizeUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OptimizeUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveResim_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResim" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveResim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunResimYukle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UrunResimYukle" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunResimYukle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UrunResimYukleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectMagazaStok_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMagazaStok" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectMagazaStok_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMagazaStokResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveMagazaStok_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMagazaStok" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveMagazaStok_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMagazaStokResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrl" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunOdemeSecenek_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunOdemeSecenek" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunOdemeSecenek_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunOdemeSecenekResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunYorum_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunYorum" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunYorum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunYorumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_GetTaksitSecenekleri_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaksitSecenekleri" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_GetTaksitSecenekleri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaksitSecenekleriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_GetProductStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductStatus" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_GetProductStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunKategori" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunKategoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrunKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrunKategori" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrunKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrunKategoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteUrunKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrunKategori" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteUrunKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrunKategoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunEtiket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunEtiket" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunEtiket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunEtiketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrunEtiket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrunEtiket" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrunEtiket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrunEtiketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteUrunEtiket_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrunEtiket" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteUrunEtiket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrunEtiketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectIlgiliUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIlgiliUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectIlgiliUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIlgiliUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveIlgiliUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveIlgiliUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveIlgiliUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveIlgiliUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteIlgiliUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIlgiliUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteIlgiliUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIlgiliUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunBarkodGuncelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UrunBarkodGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunBarkodGuncelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UrunBarkodGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunTakimKaydet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UrunTakimKaydet" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunTakimKaydet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UrunTakimKaydetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunKategoriGuncelleByStokKodu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UrunKategoriGuncelleByStokKodu" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunKategoriGuncelleByStokKodu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UrunKategoriGuncelleByStokKoduResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_Urun360ResimYukle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Urun360ResimYukle" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_Urun360ResimYukle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Urun360ResimYukleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunResim_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunResim" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunResim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunResimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveKombinUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKombinUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveKombinUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKombinUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteKombinUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteKombinUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteKombinUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteKombinUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectKombinUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKombinUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectKombinUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKombinUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTamamlayiciUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTamamlayiciUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTamamlayiciUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTamamlayiciUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteTamamlayiciUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTamamlayiciUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteTamamlayiciUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTamamlayiciUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTamamlayiciUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTamamlayiciUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTamamlayiciUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTamamlayiciUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTakimUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTakimUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveTakimUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTakimUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteTakimUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTakimUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteTakimUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTakimUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTakimUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTakimUrun" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectTakimUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTakimUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunKartiGuncelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UrunKartiGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UrunKartiGuncelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UrunKartiGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrunDetayTab_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrunDetayTab" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SaveUrunDetayTab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUrunDetayTabResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteUrunDetayTab_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrunDetayTab" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_DeleteUrunDetayTab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrunDetayTabResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunDetayTab_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunDetayTab" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_SelectUrunDetayTab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrunDetayTabResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateUrunDetayTab_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrunDetayTab" />
+  </wsdl:message>
+  <wsdl:message name="IUrunServis_UpdateUrunDetayTab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrunDetayTabResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUrunServis">
+    <wsdl:operation name="SelectKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectKategori" message="tns:IUrunServis_SelectKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectKategoriResponse" message="tns:IUrunServis_SelectKategori_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveKategori" message="tns:IUrunServis_SaveKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveKategoriResponse" message="tns:IUrunServis_SaveKategori_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveKategoriParent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveKategoriParent" message="tns:IUrunServis_SaveKategoriParent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveKategoriParentResponse" message="tns:IUrunServis_SaveKategoriParent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteKategori" message="tns:IUrunServis_DeleteKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteKategoriResponse" message="tns:IUrunServis_DeleteKategori_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKategoriDil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateKategoriDil" message="tns:IUrunServis_UpdateKategoriDil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateKategoriDilResponse" message="tns:IUrunServis_UpdateKategoriDil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMarka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectMarka" message="tns:IUrunServis_SelectMarka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectMarkaResponse" message="tns:IUrunServis_SelectMarka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMarka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveMarka" message="tns:IUrunServis_SaveMarka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveMarkaResponse" message="tns:IUrunServis_SaveMarka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteMarka" message="tns:IUrunServis_DeleteMarka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteMarkaResponse" message="tns:IUrunServis_DeleteMarka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTedarikci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectTedarikci" message="tns:IUrunServis_SelectTedarikci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectTedarikciResponse" message="tns:IUrunServis_SelectTedarikci_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTedarikci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveTedarikci" message="tns:IUrunServis_SaveTedarikci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveTedarikciResponse" message="tns:IUrunServis_SaveTedarikci_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTedarikci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteTedarikci" message="tns:IUrunServis_DeleteTedarikci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteTedarikciResponse" message="tns:IUrunServis_DeleteTedarikci_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEtiket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectEtiket" message="tns:IUrunServis_SelectEtiket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectEtiketResponse" message="tns:IUrunServis_SelectEtiket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEtiket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveEtiket" message="tns:IUrunServis_SaveEtiket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveEtiketResponse" message="tns:IUrunServis_SaveEtiket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectParaBirimi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectParaBirimi" message="tns:IUrunServis_SelectParaBirimi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectParaBirimiResponse" message="tns:IUrunServis_SelectParaBirimi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveParaBirimi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveParaBirimi" message="tns:IUrunServis_SaveParaBirimi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveParaBirimiResponse" message="tns:IUrunServis_SaveParaBirimi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTeknikDetayGrup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectTeknikDetayGrup" message="tns:IUrunServis_SelectTeknikDetayGrup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectTeknikDetayGrupResponse" message="tns:IUrunServis_SelectTeknikDetayGrup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeknikDetayGrup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveTeknikDetayGrup" message="tns:IUrunServis_SaveTeknikDetayGrup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveTeknikDetayGrupResponse" message="tns:IUrunServis_SaveTeknikDetayGrup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeknikDetayGrupDil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateTeknikDetayGrupDil" message="tns:IUrunServis_UpdateTeknikDetayGrupDil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateTeknikDetayGrupDilResponse" message="tns:IUrunServis_UpdateTeknikDetayGrupDil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTeknikDetayOzellik">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectTeknikDetayOzellik" message="tns:IUrunServis_SelectTeknikDetayOzellik_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectTeknikDetayOzellikResponse" message="tns:IUrunServis_SelectTeknikDetayOzellik_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeknikDetayOzellik">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveTeknikDetayOzellik" message="tns:IUrunServis_SaveTeknikDetayOzellik_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveTeknikDetayOzellikResponse" message="tns:IUrunServis_SaveTeknikDetayOzellik_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeknikDetayOzellikDil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateTeknikDetayOzellikDil" message="tns:IUrunServis_UpdateTeknikDetayOzellikDil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateTeknikDetayOzellikDilResponse" message="tns:IUrunServis_UpdateTeknikDetayOzellikDil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTeknikDetayDeger">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectTeknikDetayDeger" message="tns:IUrunServis_SelectTeknikDetayDeger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectTeknikDetayDegerResponse" message="tns:IUrunServis_SelectTeknikDetayDeger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeknikDetayDeger">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveTeknikDetayDeger" message="tns:IUrunServis_SaveTeknikDetayDeger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveTeknikDetayDegerResponse" message="tns:IUrunServis_SaveTeknikDetayDeger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeknikDetayDegerDil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateTeknikDetayDegerDil" message="tns:IUrunServis_UpdateTeknikDetayDegerDil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateTeknikDetayDegerDilResponse" message="tns:IUrunServis_UpdateTeknikDetayDegerDil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAsortiGrup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveAsortiGrup" message="tns:IUrunServis_SaveAsortiGrup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveAsortiGrupResponse" message="tns:IUrunServis_SaveAsortiGrup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAsortiGrup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectAsortiGrup" message="tns:IUrunServis_SelectAsortiGrup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectAsortiGrupResponse" message="tns:IUrunServis_SelectAsortiGrup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAsortiMiktar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveAsortiMiktar" message="tns:IUrunServis_SaveAsortiMiktar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveAsortiMiktarResponse" message="tns:IUrunServis_SaveAsortiMiktar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAsortiMiktar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectAsortiMiktar" message="tns:IUrunServis_SelectAsortiMiktar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectAsortiMiktarResponse" message="tns:IUrunServis_SelectAsortiMiktar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEkSecenekGrup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectEkSecenekGrup" message="tns:IUrunServis_SelectEkSecenekGrup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectEkSecenekGrupResponse" message="tns:IUrunServis_SelectEkSecenekGrup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEkSecenekGrupDil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateEkSecenekGrupDil" message="tns:IUrunServis_UpdateEkSecenekGrupDil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateEkSecenekGrupDilResponse" message="tns:IUrunServis_UpdateEkSecenekGrupDil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEkSecenekDeger">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectEkSecenekDeger" message="tns:IUrunServis_SelectEkSecenekDeger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectEkSecenekDegerResponse" message="tns:IUrunServis_SelectEkSecenekDeger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEkSecenekDegerDil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateEkSecenekDegerDil" message="tns:IUrunServis_UpdateEkSecenekDegerDil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateEkSecenekDegerDilResponse" message="tns:IUrunServis_UpdateEkSecenekDegerDil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrun" message="tns:IUrunServis_SelectUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunResponse" message="tns:IUrunServis_SelectUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunCount" message="tns:IUrunServis_SelectUrunCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunCountResponse" message="tns:IUrunServis_SelectUrunCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectVaryasyon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectVaryasyon" message="tns:IUrunServis_SelectVaryasyon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectVaryasyonResponse" message="tns:IUrunServis_SelectVaryasyon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectVaryasyonCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectVaryasyonCount" message="tns:IUrunServis_SelectVaryasyonCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectVaryasyonCountResponse" message="tns:IUrunServis_SelectVaryasyonCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveUrun" message="tns:IUrunServis_SaveUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveUrunResponse" message="tns:IUrunServis_SaveUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveVaryasyon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveVaryasyon" message="tns:IUrunServis_SaveVaryasyon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveVaryasyonResponse" message="tns:IUrunServis_SaveVaryasyon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrunDil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateUrunDil" message="tns:IUrunServis_UpdateUrunDil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateUrunDilResponse" message="tns:IUrunServis_UpdateUrunDil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StokAdediGuncelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/StokAdediGuncelle" message="tns:IUrunServis_StokAdediGuncelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/StokAdediGuncelleResponse" message="tns:IUrunServis_StokAdediGuncelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VaryasyonGuncelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/VaryasyonGuncelle" message="tns:IUrunServis_VaryasyonGuncelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/VaryasyonGuncelleResponse" message="tns:IUrunServis_VaryasyonGuncelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OptimizeUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/OptimizeUrun" message="tns:IUrunServis_OptimizeUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/OptimizeUrunResponse" message="tns:IUrunServis_OptimizeUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveResim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveResim" message="tns:IUrunServis_SaveResim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveResimResponse" message="tns:IUrunServis_SaveResim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UrunResimYukle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UrunResimYukle" message="tns:IUrunServis_UrunResimYukle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UrunResimYukleResponse" message="tns:IUrunServis_UrunResimYukle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMagazaStok">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectMagazaStok" message="tns:IUrunServis_SelectMagazaStok_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectMagazaStokResponse" message="tns:IUrunServis_SelectMagazaStok_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMagazaStok">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveMagazaStok" message="tns:IUrunServis_SaveMagazaStok_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveMagazaStokResponse" message="tns:IUrunServis_SaveMagazaStok_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateUrl" message="tns:IUrunServis_UpdateUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateUrlResponse" message="tns:IUrunServis_UpdateUrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunOdemeSecenek">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunOdemeSecenek" message="tns:IUrunServis_SelectUrunOdemeSecenek_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunOdemeSecenekResponse" message="tns:IUrunServis_SelectUrunOdemeSecenek_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunYorum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunYorum" message="tns:IUrunServis_SelectUrunYorum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunYorumResponse" message="tns:IUrunServis_SelectUrunYorum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaksitSecenekleri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/GetTaksitSecenekleri" message="tns:IUrunServis_GetTaksitSecenekleri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/GetTaksitSecenekleriResponse" message="tns:IUrunServis_GetTaksitSecenekleri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/GetProductStatus" message="tns:IUrunServis_GetProductStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/GetProductStatusResponse" message="tns:IUrunServis_GetProductStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunKategori" message="tns:IUrunServis_SelectUrunKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunKategoriResponse" message="tns:IUrunServis_SelectUrunKategori_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrunKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveUrunKategori" message="tns:IUrunServis_SaveUrunKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveUrunKategoriResponse" message="tns:IUrunServis_SaveUrunKategori_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrunKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteUrunKategori" message="tns:IUrunServis_DeleteUrunKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteUrunKategoriResponse" message="tns:IUrunServis_DeleteUrunKategori_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunEtiket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunEtiket" message="tns:IUrunServis_SelectUrunEtiket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunEtiketResponse" message="tns:IUrunServis_SelectUrunEtiket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrunEtiket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveUrunEtiket" message="tns:IUrunServis_SaveUrunEtiket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveUrunEtiketResponse" message="tns:IUrunServis_SaveUrunEtiket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrunEtiket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteUrunEtiket" message="tns:IUrunServis_DeleteUrunEtiket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteUrunEtiketResponse" message="tns:IUrunServis_DeleteUrunEtiket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIlgiliUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectIlgiliUrun" message="tns:IUrunServis_SelectIlgiliUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectIlgiliUrunResponse" message="tns:IUrunServis_SelectIlgiliUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveIlgiliUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveIlgiliUrun" message="tns:IUrunServis_SaveIlgiliUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveIlgiliUrunResponse" message="tns:IUrunServis_SaveIlgiliUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIlgiliUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteIlgiliUrun" message="tns:IUrunServis_DeleteIlgiliUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteIlgiliUrunResponse" message="tns:IUrunServis_DeleteIlgiliUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UrunBarkodGuncelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UrunBarkodGuncelle" message="tns:IUrunServis_UrunBarkodGuncelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UrunBarkodGuncelleResponse" message="tns:IUrunServis_UrunBarkodGuncelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UrunTakimKaydet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UrunTakimKaydet" message="tns:IUrunServis_UrunTakimKaydet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UrunTakimKaydetResponse" message="tns:IUrunServis_UrunTakimKaydet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UrunKategoriGuncelleByStokKodu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UrunKategoriGuncelleByStokKodu" message="tns:IUrunServis_UrunKategoriGuncelleByStokKodu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UrunKategoriGuncelleByStokKoduResponse" message="tns:IUrunServis_UrunKategoriGuncelleByStokKodu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Urun360ResimYukle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/Urun360ResimYukle" message="tns:IUrunServis_Urun360ResimYukle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/Urun360ResimYukleResponse" message="tns:IUrunServis_Urun360ResimYukle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunResim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunResim" message="tns:IUrunServis_SelectUrunResim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunResimResponse" message="tns:IUrunServis_SelectUrunResim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveKombinUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveKombinUrun" message="tns:IUrunServis_SaveKombinUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveKombinUrunResponse" message="tns:IUrunServis_SaveKombinUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKombinUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteKombinUrun" message="tns:IUrunServis_DeleteKombinUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteKombinUrunResponse" message="tns:IUrunServis_DeleteKombinUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectKombinUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectKombinUrun" message="tns:IUrunServis_SelectKombinUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectKombinUrunResponse" message="tns:IUrunServis_SelectKombinUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTamamlayiciUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveTamamlayiciUrun" message="tns:IUrunServis_SaveTamamlayiciUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveTamamlayiciUrunResponse" message="tns:IUrunServis_SaveTamamlayiciUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTamamlayiciUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteTamamlayiciUrun" message="tns:IUrunServis_DeleteTamamlayiciUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteTamamlayiciUrunResponse" message="tns:IUrunServis_DeleteTamamlayiciUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTamamlayiciUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectTamamlayiciUrun" message="tns:IUrunServis_SelectTamamlayiciUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectTamamlayiciUrunResponse" message="tns:IUrunServis_SelectTamamlayiciUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTakimUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveTakimUrun" message="tns:IUrunServis_SaveTakimUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveTakimUrunResponse" message="tns:IUrunServis_SaveTakimUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTakimUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteTakimUrun" message="tns:IUrunServis_DeleteTakimUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteTakimUrunResponse" message="tns:IUrunServis_DeleteTakimUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTakimUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectTakimUrun" message="tns:IUrunServis_SelectTakimUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectTakimUrunResponse" message="tns:IUrunServis_SelectTakimUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UrunKartiGuncelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UrunKartiGuncelle" message="tns:IUrunServis_UrunKartiGuncelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UrunKartiGuncelleResponse" message="tns:IUrunServis_UrunKartiGuncelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrunDetayTab">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SaveUrunDetayTab" message="tns:IUrunServis_SaveUrunDetayTab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SaveUrunDetayTabResponse" message="tns:IUrunServis_SaveUrunDetayTab_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrunDetayTab">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/DeleteUrunDetayTab" message="tns:IUrunServis_DeleteUrunDetayTab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/DeleteUrunDetayTabResponse" message="tns:IUrunServis_DeleteUrunDetayTab_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunDetayTab">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunDetayTab" message="tns:IUrunServis_SelectUrunDetayTab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/SelectUrunDetayTabResponse" message="tns:IUrunServis_SelectUrunDetayTab_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrunDetayTab">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUrunServis/UpdateUrunDetayTab" message="tns:IUrunServis_UpdateUrunDetayTab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUrunServis/UpdateUrunDetayTabResponse" message="tns:IUrunServis_UpdateUrunDetayTab_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUrunServis" type="tns:IUrunServis">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectKategori">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveKategori">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveKategoriParent">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveKategoriParent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKategori">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKategoriDil">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateKategoriDil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMarka">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectMarka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMarka">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveMarka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarka">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteMarka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTedarikci">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectTedarikci" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTedarikci">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveTedarikci" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTedarikci">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteTedarikci" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEtiket">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectEtiket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEtiket">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveEtiket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectParaBirimi">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectParaBirimi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveParaBirimi">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveParaBirimi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTeknikDetayGrup">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectTeknikDetayGrup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeknikDetayGrup">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveTeknikDetayGrup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeknikDetayGrupDil">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateTeknikDetayGrupDil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTeknikDetayOzellik">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectTeknikDetayOzellik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeknikDetayOzellik">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveTeknikDetayOzellik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeknikDetayOzellikDil">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateTeknikDetayOzellikDil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTeknikDetayDeger">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectTeknikDetayDeger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTeknikDetayDeger">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveTeknikDetayDeger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeknikDetayDegerDil">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateTeknikDetayDegerDil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAsortiGrup">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveAsortiGrup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAsortiGrup">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectAsortiGrup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAsortiMiktar">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveAsortiMiktar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAsortiMiktar">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectAsortiMiktar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEkSecenekGrup">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectEkSecenekGrup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEkSecenekGrupDil">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateEkSecenekGrupDil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEkSecenekDeger">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectEkSecenekDeger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEkSecenekDegerDil">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateEkSecenekDegerDil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunCount">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrunCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectVaryasyon">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectVaryasyon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectVaryasyonCount">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectVaryasyonCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveVaryasyon">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveVaryasyon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrunDil">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateUrunDil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StokAdediGuncelle">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/StokAdediGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VaryasyonGuncelle">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/VaryasyonGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OptimizeUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/OptimizeUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveResim">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveResim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UrunResimYukle">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UrunResimYukle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMagazaStok">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectMagazaStok" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMagazaStok">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveMagazaStok" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrl">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunOdemeSecenek">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrunOdemeSecenek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunYorum">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrunYorum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaksitSecenekleri">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/GetTaksitSecenekleri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductStatus">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/GetProductStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunKategori">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrunKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrunKategori">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveUrunKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrunKategori">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteUrunKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunEtiket">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrunEtiket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrunEtiket">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveUrunEtiket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrunEtiket">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteUrunEtiket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIlgiliUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectIlgiliUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveIlgiliUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveIlgiliUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIlgiliUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteIlgiliUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UrunBarkodGuncelle">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UrunBarkodGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UrunTakimKaydet">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UrunTakimKaydet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UrunKategoriGuncelleByStokKodu">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UrunKategoriGuncelleByStokKodu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Urun360ResimYukle">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/Urun360ResimYukle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunResim">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrunResim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveKombinUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveKombinUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKombinUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteKombinUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectKombinUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectKombinUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTamamlayiciUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveTamamlayiciUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTamamlayiciUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteTamamlayiciUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTamamlayiciUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectTamamlayiciUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTakimUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveTakimUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTakimUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteTakimUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTakimUrun">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectTakimUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UrunKartiGuncelle">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UrunKartiGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUrunDetayTab">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SaveUrunDetayTab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrunDetayTab">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/DeleteUrunDetayTab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrunDetayTab">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/SelectUrunDetayTab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrunDetayTab">
+      <soap:operation soapAction="http://tempuri.org/IUrunServis/UpdateUrunDetayTab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UrunServis">
+    <wsdl:port name="BasicHttpBinding_IUrunServis" binding="tns:BasicHttpBinding_IUrunServis">
+      <soap:address location="http://cagla.tcmx.dev/servis/UrunServis.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

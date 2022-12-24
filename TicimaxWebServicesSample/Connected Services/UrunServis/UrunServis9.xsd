@@ -1,0 +1,1858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ticimax.BL" />
+  <xs:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://cagla.tcmx.dev/servis/UrunServis.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfKategori">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Kategori" nillable="true" type="tns:Kategori" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKategori" nillable="true" type="tns:ArrayOfKategori" />
+  <xs:complexType name="Kategori">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Icerik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KategoriMenuGoster" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Kod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PID" type="xs:int" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Kategori" nillable="true" type="tns:Kategori" />
+  <xs:complexType name="WebServisResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServisResponse" nillable="true" type="tns:WebServisResponse" />
+  <xs:complexType name="UpdateKategoriDilRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ayar" nillable="true" type="tns:KategoriDilAyar" />
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liste" nillable="true" type="tns:ArrayOfKategoriDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateKategoriDilRequest" nillable="true" type="tns:UpdateKategoriDilRequest" />
+  <xs:complexType name="KategoriDilAyar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IcerikGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelimeGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklamaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslikGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TanimGuncelle" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KategoriDilAyar" nillable="true" type="tns:KategoriDilAyar" />
+  <xs:complexType name="ArrayOfKategoriDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KategoriDil" nillable="true" type="tns:KategoriDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKategoriDil" nillable="true" type="tns:ArrayOfKategoriDil" />
+  <xs:complexType name="KategoriDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Icerik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KategoriDil" nillable="true" type="tns:KategoriDil" />
+  <xs:complexType name="ArrayOfMarka">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Marka" nillable="true" type="tns:Marka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMarka" nillable="true" type="tns:ArrayOfMarka" />
+  <xs:complexType name="Marka">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Marka" nillable="true" type="tns:Marka" />
+  <xs:complexType name="ArrayOfTedarikci">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tedarikci" nillable="true" type="tns:Tedarikci" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTedarikci" nillable="true" type="tns:ArrayOfTedarikci" />
+  <xs:complexType name="Tedarikci">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Not" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tedarikci" nillable="true" type="tns:Tedarikci" />
+  <xs:complexType name="ArrayOfEtiket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Etiket" nillable="true" type="tns:Etiket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEtiket" nillable="true" type="tns:ArrayOfEtiket" />
+  <xs:complexType name="Etiket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Resim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Etiket" nillable="true" type="tns:Etiket" />
+  <xs:complexType name="ArrayOfParaBirimi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParaBirimi" nillable="true" type="tns:ParaBirimi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParaBirimi" nillable="true" type="tns:ArrayOfParaBirimi" />
+  <xs:complexType name="ParaBirimi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DovizKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuncellemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Kur" type="xs:double" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParaBirimi" nillable="true" type="tns:ParaBirimi" />
+  <xs:complexType name="ArrayOfTeknikDetayGrup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TeknikDetayGrup" nillable="true" type="tns:TeknikDetayGrup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeknikDetayGrup" nillable="true" type="tns:ArrayOfTeknikDetayGrup" />
+  <xs:complexType name="TeknikDetayGrup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeknikDetayGrup" nillable="true" type="tns:TeknikDetayGrup" />
+  <xs:complexType name="UpdateTeknikDetayGrupDilRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liste" nillable="true" type="tns:ArrayOfTeknikDetayGrupDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateTeknikDetayGrupDilRequest" nillable="true" type="tns:UpdateTeknikDetayGrupDilRequest" />
+  <xs:complexType name="ArrayOfTeknikDetayGrupDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TeknikDetayGrupDil" nillable="true" type="tns:TeknikDetayGrupDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeknikDetayGrupDil" nillable="true" type="tns:ArrayOfTeknikDetayGrupDil" />
+  <xs:complexType name="TeknikDetayGrupDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeknikDetayGrupDil" nillable="true" type="tns:TeknikDetayGrupDil" />
+  <xs:complexType name="ArrayOfTeknikDetayOzellik">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TeknikDetayOzellik" nillable="true" type="tns:TeknikDetayOzellik" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeknikDetayOzellik" nillable="true" type="tns:ArrayOfTeknikDetayOzellik" />
+  <xs:complexType name="TeknikDetayOzellik">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GrupID" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeknikDetayOzellik" nillable="true" type="tns:TeknikDetayOzellik" />
+  <xs:complexType name="UpdateTeknikDetayOzellikDilRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liste" nillable="true" type="tns:ArrayOfTeknikDetayOzellikDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateTeknikDetayOzellikDilRequest" nillable="true" type="tns:UpdateTeknikDetayOzellikDilRequest" />
+  <xs:complexType name="ArrayOfTeknikDetayOzellikDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TeknikDetayOzellikDil" nillable="true" type="tns:TeknikDetayOzellikDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeknikDetayOzellikDil" nillable="true" type="tns:ArrayOfTeknikDetayOzellikDil" />
+  <xs:complexType name="TeknikDetayOzellikDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeknikDetayOzellikDil" nillable="true" type="tns:TeknikDetayOzellikDil" />
+  <xs:complexType name="ArrayOfTeknikDetayDeger">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TeknikDetayDeger" nillable="true" type="tns:TeknikDetayDeger" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeknikDetayDeger" nillable="true" type="tns:ArrayOfTeknikDetayDeger" />
+  <xs:complexType name="TeknikDetayDeger">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="OzellikID" type="xs:int" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeknikDetayDeger" nillable="true" type="tns:TeknikDetayDeger" />
+  <xs:complexType name="UpdateTeknikDetayDegerDilRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liste" nillable="true" type="tns:ArrayOfTeknikDetayDegerDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateTeknikDetayDegerDilRequest" nillable="true" type="tns:UpdateTeknikDetayDegerDilRequest" />
+  <xs:complexType name="ArrayOfTeknikDetayDegerDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TeknikDetayDegerDil" nillable="true" type="tns:TeknikDetayDegerDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeknikDetayDegerDil" nillable="true" type="tns:ArrayOfTeknikDetayDegerDil" />
+  <xs:complexType name="TeknikDetayDegerDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TeknikDetayDegerDil" nillable="true" type="tns:TeknikDetayDegerDil" />
+  <xs:complexType name="AsortiGrup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EkSecenekTipi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AsortiGrup" nillable="true" type="tns:AsortiGrup" />
+  <xs:complexType name="SaveResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveResponse" nillable="true" type="tns:SaveResponse" />
+  <xs:complexType name="ArrayOfAsortiGrup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AsortiGrup" nillable="true" type="tns:AsortiGrup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAsortiGrup" nillable="true" type="tns:ArrayOfAsortiGrup" />
+  <xs:complexType name="AsortiMiktar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet" type="xs:int" />
+      <xs:element minOccurs="0" name="EkSecenekTanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrupID" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AsortiMiktar" nillable="true" type="tns:AsortiMiktar" />
+  <xs:complexType name="ArrayOfAsortiMiktar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AsortiMiktar" nillable="true" type="tns:AsortiMiktar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAsortiMiktar" nillable="true" type="tns:ArrayOfAsortiMiktar" />
+  <xs:complexType name="ArrayOfEkSecenekGrup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EkSecenekGrup" nillable="true" type="tns:EkSecenekGrup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEkSecenekGrup" nillable="true" type="tns:ArrayOfEkSecenekGrup" />
+  <xs:complexType name="EkSecenekGrup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Degerler" nillable="true" type="tns:ArrayOfEkSecenekDeger" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ticimax.BL" minOccurs="0" name="Tur" type="q1:BLEnums.VaryasyonTuru" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EkSecenekGrup" nillable="true" type="tns:EkSecenekGrup" />
+  <xs:complexType name="ArrayOfEkSecenekDeger">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EkSecenekDeger" nillable="true" type="tns:EkSecenekDeger" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEkSecenekDeger" nillable="true" type="tns:ArrayOfEkSecenekDeger" />
+  <xs:complexType name="EkSecenekDeger">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GrupID" type="xs:int" />
+      <xs:element minOccurs="0" name="GrupTanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EkSecenekDeger" nillable="true" type="tns:EkSecenekDeger" />
+  <xs:complexType name="UpdateEkSecenekGrupDilRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liste" nillable="true" type="tns:ArrayOfEkSecenekGrupDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateEkSecenekGrupDilRequest" nillable="true" type="tns:UpdateEkSecenekGrupDilRequest" />
+  <xs:complexType name="ArrayOfEkSecenekGrupDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EkSecenekGrupDil" nillable="true" type="tns:EkSecenekGrupDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEkSecenekGrupDil" nillable="true" type="tns:ArrayOfEkSecenekGrupDil" />
+  <xs:complexType name="EkSecenekGrupDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EkSecenekGrupDil" nillable="true" type="tns:EkSecenekGrupDil" />
+  <xs:complexType name="UpdateEkSecenekDegerDilRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liste" nillable="true" type="tns:ArrayOfEkSecenekDegerDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateEkSecenekDegerDilRequest" nillable="true" type="tns:UpdateEkSecenekDegerDilRequest" />
+  <xs:complexType name="ArrayOfEkSecenekDegerDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EkSecenekDegerDil" nillable="true" type="tns:EkSecenekDegerDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEkSecenekDegerDil" nillable="true" type="tns:ArrayOfEkSecenekDegerDil" />
+  <xs:complexType name="EkSecenekDegerDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EkSecenekDegerDil" nillable="true" type="tns:EkSecenekDegerDil" />
+  <xs:complexType name="UrunFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:int" />
+      <xs:element minOccurs="0" name="Barkod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DuzenlemeTarihiBaslangic" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DuzenlemeTarihiBitis" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EklemeTarihiBaslangic" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EklemeTarihiBitis" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntegrasyonDegerTanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntegrasyonKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Firsat" type="xs:int" />
+      <xs:element minOccurs="0" name="FiyatFiltre" nillable="true" type="tns:ArrayOfUrunFiyatFiltre" />
+      <xs:element minOccurs="0" name="IlgiliUrunleriListele" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Indirimli" type="xs:int" />
+      <xs:element minOccurs="0" name="KasaOnuFirsatlari" type="xs:int" />
+      <xs:element minOccurs="0" name="KategoriID" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="KategoriIDList" nillable="true" type="q2:ArrayOfint" />
+      <xs:element minOccurs="0" name="MarkaID" type="xs:int" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResimDurumu" type="tns:UrunResimDurumu" />
+      <xs:element minOccurs="0" name="ResimEklemeTarihiBaslangic" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ResimEklemeTarihiBitis" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StokKodu" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="StokKoduList" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="TedarikciID" type="xs:int" />
+      <xs:element minOccurs="0" name="ToplamStokAdediBas" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="ToplamStokAdediSon" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="Vitrin" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunFiltre" nillable="true" type="tns:UrunFiltre" />
+  <xs:complexType name="ArrayOfUrunFiyatFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunFiyatFiltre" nillable="true" type="tns:UrunFiyatFiltre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunFiyatFiltre" nillable="true" type="tns:ArrayOfUrunFiyatFiltre" />
+  <xs:complexType name="UrunFiyatFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FiyatBaslangic" type="xs:double" />
+      <xs:element minOccurs="0" name="FiyatBitis" type="xs:double" />
+      <xs:element minOccurs="0" name="FiyatTipi" type="tns:UrunFiyatTipi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunFiyatFiltre" nillable="true" type="tns:UrunFiyatFiltre" />
+  <xs:simpleType name="UrunFiyatTipi">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AlisFiyati">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SatisFiyati">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IndirimliFiyat">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat1">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat2">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat3">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat4">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat5">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat6">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat7">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat8">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat9">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat10">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat11">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat12">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat13">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat14">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat15">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat16">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat17">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat18">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat19">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UyeTipiFiyat20">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UrunFiyatTipi" nillable="true" type="tns:UrunFiyatTipi" />
+  <xs:simpleType name="UrunResimDurumu">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Tumu" />
+      <xs:enumeration value="Resimli" />
+      <xs:enumeration value="Resimsiz" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UrunResimDurumu" nillable="true" type="tns:UrunResimDurumu" />
+  <xs:complexType name="UrunSayfalama">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaslangicIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="KayitSayisi" type="xs:int" />
+      <xs:element minOccurs="0" name="SiralamaDegeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiralamaYonu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunSayfalama" nillable="true" type="tns:UrunSayfalama" />
+  <xs:complexType name="ArrayOfUrunKarti">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunKarti" nillable="true" type="tns:UrunKarti" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunKarti" nillable="true" type="tns:ArrayOfUrunKarti" />
+  <xs:complexType name="UrunKarti">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdwordsAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdwordsKategori" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdwordsTip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AnaKategori" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnaKategoriID" type="xs:int" />
+      <xs:element minOccurs="0" name="AramaAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AsortiGrupID" type="xs:int" />
+      <xs:element minOccurs="0" name="DuzenleyenKullanici" type="xs:int" />
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EkleyenKullanici" type="xs:int" />
+      <xs:element minOccurs="0" name="EntegrasyonID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Etiketler" nillable="true" type="tns:ArrayOfUrunKartiEtiket" />
+      <xs:element minOccurs="0" name="FBStoreGoster" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirsatUrunu" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IndirimliFiyatOzellik" type="xs:int" />
+      <xs:element minOccurs="0" name="IndirimliFiyatOzellikStok1" type="xs:int" />
+      <xs:element minOccurs="0" name="IndirimliFiyatOzellikStok2" type="xs:int" />
+      <xs:element minOccurs="0" name="IndirimliFiyatOzellikTarih1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IndirimliFiyatOzellikTarih2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KargoTipi" type="xs:int" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Kategoriler" nillable="true" type="q4:ArrayOfint" />
+      <xs:element minOccurs="0" name="ListedeGoster" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaksTaksitSayisi" type="xs:int" />
+      <xs:element minOccurs="0" name="Marka" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarkaID" type="xs:int" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif3" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MenseiUlke" nillable="true" type="tns:Ulke" />
+      <xs:element minOccurs="0" name="OnYazi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PuanDeger" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Resimler" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="SatisBirimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoNoFollow" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoNoIndex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresi" type="xs:int" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiAyniGun" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiGoster" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TakimKampanyaId" type="xs:int" />
+      <xs:element minOccurs="0" name="TakimUrun" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TedarikciID" type="xs:int" />
+      <xs:element minOccurs="0" name="TedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TedarikciKodu2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeknikDetayGrupID" type="xs:int" />
+      <xs:element minOccurs="0" name="TeknikDetaylar" nillable="true" type="tns:ArrayOfUrunKartiTeknikDetay" />
+      <xs:element minOccurs="0" name="ToplamStokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="UcretsizKargo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdediKademeDeger" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunAdediMinimumDeger" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunAdediOndalikliSayiGirilebilir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdediVarsayilanDeger" type="xs:double" />
+      <xs:element minOccurs="0" name="UrunAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKapidaOdemeYasakli" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunSayfaAdresi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeAlimMax" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeAlimMin" type="xs:double" />
+      <xs:element minOccurs="0" name="Varyasyonlar" nillable="true" type="tns:ArrayOfVaryasyon" />
+      <xs:element minOccurs="0" name="Vitrin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="YayinTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="YeniUrun" type="xs:boolean" />
+      <xs:element minOccurs="0" name="YonlendirmeAdresi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunKarti" nillable="true" type="tns:UrunKarti" />
+  <xs:complexType name="ArrayOfUrunKartiEtiket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunKartiEtiket" nillable="true" type="tns:UrunKartiEtiket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunKartiEtiket" nillable="true" type="tns:ArrayOfUrunKartiEtiket" />
+  <xs:complexType name="UrunKartiEtiket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EtiketID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunKartiEtiket" nillable="true" type="tns:UrunKartiEtiket" />
+  <xs:complexType name="Ulke">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alpha2Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Alpha3Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="NumericCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ulke" nillable="true" type="tns:Ulke" />
+  <xs:complexType name="ArrayOfUrunKartiTeknikDetay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunKartiTeknikDetay" nillable="true" type="tns:UrunKartiTeknikDetay" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunKartiTeknikDetay" nillable="true" type="tns:ArrayOfUrunKartiTeknikDetay" />
+  <xs:complexType name="UrunKartiTeknikDetay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DegerID" type="xs:int" />
+      <xs:element minOccurs="0" name="OzellikID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunKartiTeknikDetay" nillable="true" type="tns:UrunKartiTeknikDetay" />
+  <xs:complexType name="ArrayOfVaryasyon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Varyasyon" nillable="true" type="tns:Varyasyon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVaryasyon" nillable="true" type="tns:ArrayOfVaryasyon" />
+  <xs:complexType name="Varyasyon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AlisFiyati" type="xs:double" />
+      <xs:element minOccurs="0" name="Barkod" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Barkodlar" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Desi" type="xs:double" />
+      <xs:element minOccurs="0" name="Desi2" type="xs:double" />
+      <xs:element minOccurs="0" name="DuzenleyenKullanici" type="xs:int" />
+      <xs:element minOccurs="0" name="EkleyenKullanici" type="xs:int" />
+      <xs:element minOccurs="0" name="EksiStokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IndirimliFiyati" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati1" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati10" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati11" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati12" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati13" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati14" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati15" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati16" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati17" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati18" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati19" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati2" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati20" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati3" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati4" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati5" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati6" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati7" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati8" type="xs:double" />
+      <xs:element minOccurs="0" name="IndirimliFiyati9" type="xs:double" />
+      <xs:element minOccurs="0" name="IscilikAgirlik" type="xs:int" />
+      <xs:element minOccurs="0" name="IscilikParaBirimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscilikParaBirimiId" type="xs:int" />
+      <xs:element minOccurs="0" name="IscilikParaBirimiKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KargoUcreti" type="xs:double" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Kategoriler" nillable="true" type="q7:ArrayOfint" />
+      <xs:element minOccurs="0" name="KdvDahil" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil10" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil11" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil12" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil13" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil14" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil15" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil16" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil17" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil18" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil19" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil20" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil3" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil4" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil5" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil6" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil7" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil8" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahil9" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvOrani" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani1" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani10" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani11" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani12" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani13" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani14" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani15" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani16" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani17" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani18" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani19" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani2" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani20" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani3" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani4" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani5" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani6" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani7" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani8" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvOrani9" type="xs:int" />
+      <xs:element minOccurs="0" name="MarkaID" type="xs:int" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif3" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ozellikler" nillable="true" type="tns:ArrayOfVaryasyonOzellik" />
+      <xs:element minOccurs="0" name="ParaBirimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParaBirimi10Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi11Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi12Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi13Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi14Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi15Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi16Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi17Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi18Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi19Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi1Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi20Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi2Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi3Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi4Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi5Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi6Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi7Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi8Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimi9Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimiID" type="xs:int" />
+      <xs:element minOccurs="0" name="ParaBirimiKodu" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Resimler" nillable="true" type="q8:ArrayOfstring" />
+      <xs:element minOccurs="0" name="SatisFiyati" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati1" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati11" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati12" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati13" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati14" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati15" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati16" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati17" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati18" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati19" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati2" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati20" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati3" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati4" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati5" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati6" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati7" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati8" type="xs:double" />
+      <xs:element minOccurs="0" name="SatisFiyati9" type="xs:double" />
+      <xs:element minOccurs="0" name="StokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="StokKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresi" type="xs:int" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiAyniGun" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiGoster" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TedarikciKodu2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiAktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat1" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat10" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat11" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat12" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat13" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat14" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat15" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat16" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat17" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat18" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat19" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat2" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat20" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat3" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat4" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat5" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat6" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat7" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat8" type="xs:double" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat9" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Varyasyon" nillable="true" type="tns:Varyasyon" />
+  <xs:complexType name="ArrayOfVaryasyonOzellik">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VaryasyonOzellik" nillable="true" type="tns:VaryasyonOzellik" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVaryasyonOzellik" nillable="true" type="tns:ArrayOfVaryasyonOzellik" />
+  <xs:complexType name="VaryasyonOzellik">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deger" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Ticimax.BL" minOccurs="0" name="Tur" type="q9:BLEnums.VaryasyonTuru" />
+      <xs:element minOccurs="0" name="XmlKod" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VaryasyonOzellik" nillable="true" type="tns:VaryasyonOzellik" />
+  <xs:complexType name="VaryasyonFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:int" />
+      <xs:element minOccurs="0" name="Barkod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FiyatGuncellemeTarihiBas" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FiyatGuncellemeTarihiSon" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FiyatStokGuncellemeTarihiBas" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FiyatStokGuncellemeTarihiSon" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StokGuncellemeTarihiBas" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StokGuncellemeTarihiSon" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StokKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunID" type="xs:int" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UrunIdList" nillable="true" type="q10:ArrayOfint" />
+      <xs:element minOccurs="0" name="UrunKartiAktif" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VaryasyonFiltre" nillable="true" type="tns:VaryasyonFiltre" />
+  <xs:complexType name="SelectVaryasyonAyar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KategoriGetir" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectVaryasyonAyar" nillable="true" type="tns:SelectVaryasyonAyar" />
+  <xs:complexType name="UrunKartiAyar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AciklamaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AdwordsAciklamaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AdwordsKategoriGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AdwordsTipGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AktifGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AlanAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnaKategoriId" type="xs:int" />
+      <xs:element minOccurs="0" name="AramaAnahtarKelimeGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AsortiGrupGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Base64Resim" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DegerTanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntegrasyonKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EtiketGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FBStoreGosterGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirsatUrunuGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KargoTipiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KategoriGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ListedeGosterGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaksTaksitSayisiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarkaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif2Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktif3Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketPlaceAktifGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MenseiUlkeGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OnYaziGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OncekiKategoriEslestirmeleriniTemizle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OncekiResimleriSil" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan1Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan2Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan3Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan4Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan5Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ParaPuanGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResimOlmayanlaraResimEkle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResimleriIndirme" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SatisBirimiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelimeGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoNoFollowGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoNoIndexGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklamaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslikGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiGosterGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TedarikciGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TedarikciKodu2GoreGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TedarikciKodunaGoreGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TeknikDetayGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UcretsizKargoGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdediKademeDegerGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdediMinimumDegerGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdediOndalikliSayiGirilebilirGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdediVarsayilanDegerGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdresiniElleOlustur" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunKapidaOdemeYasakliGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunResimGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UyeAlimMaksGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeAlimMinGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VitrinGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="YayinTarihiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="YeniUrunGuncelle" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunKartiAyar" nillable="true" type="tns:UrunKartiAyar" />
+  <xs:complexType name="VaryasyonAyar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AktifGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AlisFiyatiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BarkodGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EkSecenekGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EksiStokAdediGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FiyatTipleriGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IndirimliFiyatiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IscilikAgirlikGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IscilikParaBirimiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KargoAgirligiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KargoUcretiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvDahilGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KdvOraniGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OncekiResimleriSil" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ParaBirimiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResimOlmayanlaraResimEkle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SatisFiyatiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StokAdediGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StokKoduGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiAyniGunGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiGosterGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TahminiTeslimSuresiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TedarikciKodunaGoreGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UpdateKeyGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunResimGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat10Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat11Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat12Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat13Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat14Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat15Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat16Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat17Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat18Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat19Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat1Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat20Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat2Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat3Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat4Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat5Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat6Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat7Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat8Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UyeTipiFiyat9Guncelle" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VaryasyonAyar" nillable="true" type="tns:VaryasyonAyar" />
+  <xs:complexType name="UpdateUrunDilRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ayar" nillable="true" type="tns:UrunDilAyar" />
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liste" nillable="true" type="tns:ArrayOfUrunDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateUrunDilRequest" nillable="true" type="tns:UpdateUrunDilRequest" />
+  <xs:complexType name="UrunDilAyar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AciklamaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AdwordsAciklamaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AdwordsKategoriGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AdwordsTipGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AramaAnahtarKelimeGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OnYaziGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan1Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan2Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan3Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan4Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OzelAlan5Guncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SatisBirimiGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelimeGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoNoFollowGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoNoIndexGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklamaGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslikGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TedarikciKodunaGoreGuncelle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunAdiGuncelle" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunDilAyar" nillable="true" type="tns:UrunDilAyar" />
+  <xs:complexType name="ArrayOfUrunDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunDil" nillable="true" type="tns:UrunDil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunDil" nillable="true" type="tns:ArrayOfUrunDil" />
+  <xs:complexType name="UrunDil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdwordsAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdwordsKategori" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdwordsTip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AramaAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="OnYazi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OzelAlan5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SatisBirimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoAnahtarKelime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoNoFollow" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoNoIndex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SeoSayfaAciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoSayfaBaslik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunAdi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunDil" nillable="true" type="tns:UrunDil" />
+  <xs:complexType name="UrunResimYukleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EslestirmeTipi" type="tns:WebUrunResimEslestirmeTipi" />
+      <xs:element minOccurs="0" name="OncekiResimleriSil" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResimAyraci" type="ser:char" />
+      <xs:element minOccurs="0" name="ResimOlmayanlaraResimEkle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResimUploadKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resimler" nillable="true" type="tns:ArrayOfWebUrunResim" />
+      <xs:element minOccurs="0" name="VaryasyonaResimYukle" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunResimYukleRequest" nillable="true" type="tns:UrunResimYukleRequest" />
+  <xs:simpleType name="WebUrunResimEslestirmeTipi">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="StokKodu">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Barkod">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WebUrunResimEslestirmeTipi" nillable="true" type="tns:WebUrunResimEslestirmeTipi" />
+  <xs:complexType name="ArrayOfWebUrunResim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebUrunResim" nillable="true" type="tns:WebUrunResim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebUrunResim" nillable="true" type="tns:ArrayOfWebUrunResim" />
+  <xs:complexType name="WebUrunResim">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResimAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimBuyuk" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ResimFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimSira" type="xs:int" />
+      <xs:element minOccurs="0" name="ResimUrunDetay" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ResimUrunListe" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="VaryasyonID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebUrunResim" nillable="true" type="tns:WebUrunResim" />
+  <xs:complexType name="UrunResimYukleResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Basarili" type="xs:int" />
+          <xs:element minOccurs="0" name="Hatali" type="xs:int" />
+          <xs:element minOccurs="0" name="Sonuclar" nillable="true" type="tns:ArrayOfUrunResimYukleSonuclar" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UrunResimYukleResponse" nillable="true" type="tns:UrunResimYukleResponse" />
+  <xs:complexType name="ArrayOfUrunResimYukleSonuclar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunResimYukleSonuclar" nillable="true" type="tns:UrunResimYukleSonuclar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunResimYukleSonuclar" nillable="true" type="tns:ArrayOfUrunResimYukleSonuclar" />
+  <xs:complexType name="UrunResimYukleSonuclar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Basarili" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mesaj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimAdi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunResimYukleSonuclar" nillable="true" type="tns:UrunResimYukleSonuclar" />
+  <xs:complexType name="SelectMagazaStokRequest">
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MagazaIdList" nillable="true" type="q11:ArrayOfint" />
+      <xs:element minOccurs="0" name="MagazaKodu" nillable="true" type="xs:string" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MagazaKoduList" nillable="true" type="q12:ArrayOfstring" />
+      <xs:element minOccurs="0" name="StokHareketTarihiBas" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StokHareketTarihiSon" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StokOlanlar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectMagazaStokRequest" nillable="true" type="tns:SelectMagazaStokRequest" />
+  <xs:complexType name="SelectMagazaStokResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MagazaStokList" nillable="true" type="tns:ArrayOfWebMagazaStok" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectMagazaStokResponse" nillable="true" type="tns:SelectMagazaStokResponse" />
+  <xs:complexType name="ArrayOfWebMagazaStok">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebMagazaStok" nillable="true" type="tns:WebMagazaStok" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebMagazaStok" nillable="true" type="tns:ArrayOfWebMagazaStok" />
+  <xs:complexType name="WebMagazaStok">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EksiStokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="MagazaID" type="xs:int" />
+      <xs:element minOccurs="0" name="MagazaKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StokAdedi" type="xs:double" />
+      <xs:element minOccurs="0" name="TedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebMagazaStok" nillable="true" type="tns:WebMagazaStok" />
+  <xs:complexType name="SaveMagazaStokRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MagazaStokList" nillable="true" type="tns:ArrayOfWebMagazaStok" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveMagazaStokRequest" nillable="true" type="tns:SaveMagazaStokRequest" />
+  <xs:complexType name="SaveMagazaStokResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveMagazaStokResponse" nillable="true" type="tns:SaveMagazaStokResponse" />
+  <xs:complexType name="UpdateUrlRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Tip" type="tns:UrlType" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateUrlRequest" nillable="true" type="tns:UpdateUrlRequest" />
+  <xs:simpleType name="UrlType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Kategori">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Marka">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Urun">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Tedarikci">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UrlType" nillable="true" type="tns:UrlType" />
+  <xs:complexType name="UpdateUrlResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateUrlResponse" nillable="true" type="tns:UpdateUrlResponse" />
+  <xs:complexType name="ArrayOfUrunOdemeSecenek">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunOdemeSecenek" nillable="true" type="tns:UrunOdemeSecenek" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunOdemeSecenek" nillable="true" type="tns:ArrayOfUrunOdemeSecenek" />
+  <xs:complexType name="UrunOdemeSecenek">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankaAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankaID" type="xs:int" />
+      <xs:element minOccurs="0" name="Taksitler" nillable="true" type="tns:ArrayOfUrunOdemeSecenekTaksit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunOdemeSecenek" nillable="true" type="tns:UrunOdemeSecenek" />
+  <xs:complexType name="ArrayOfUrunOdemeSecenekTaksit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunOdemeSecenekTaksit" nillable="true" type="tns:UrunOdemeSecenekTaksit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunOdemeSecenekTaksit" nillable="true" type="tns:ArrayOfUrunOdemeSecenekTaksit" />
+  <xs:complexType name="UrunOdemeSecenekTaksit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TaksitSayisi" type="xs:int" />
+      <xs:element minOccurs="0" name="TaksitTanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaksitTutari" type="xs:double" />
+      <xs:element minOccurs="0" name="TaksitTutariStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToplamTutar" type="xs:double" />
+      <xs:element minOccurs="0" name="ToplamTutarStr" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunOdemeSecenekTaksit" nillable="true" type="tns:UrunOdemeSecenekTaksit" />
+  <xs:complexType name="ArrayOfUrunYorum">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunYorum" nillable="true" type="tns:UrunYorum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunYorum" nillable="true" type="tns:ArrayOfUrunYorum" />
+  <xs:complexType name="UrunYorum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Isim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mesaj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UyeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunYorum" nillable="true" type="tns:UrunYorum" />
+  <xs:complexType name="ArrayOfUrunOdemeSecenekBanka">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunOdemeSecenekBanka" nillable="true" type="tns:UrunOdemeSecenekBanka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunOdemeSecenekBanka" nillable="true" type="tns:ArrayOfUrunOdemeSecenekBanka" />
+  <xs:complexType name="UrunOdemeSecenekBanka">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankaAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankaID" type="xs:int" />
+      <xs:element minOccurs="0" name="Taksitler" nillable="true" type="tns:ArrayOfUrunOdemeSecenekler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunOdemeSecenekBanka" nillable="true" type="tns:UrunOdemeSecenekBanka" />
+  <xs:complexType name="ArrayOfUrunOdemeSecenekler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunOdemeSecenekler" nillable="true" type="tns:UrunOdemeSecenekler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunOdemeSecenekler" nillable="true" type="tns:ArrayOfUrunOdemeSecenekler" />
+  <xs:complexType name="UrunOdemeSecenekler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankaID" type="xs:int" />
+      <xs:element minOccurs="0" name="TaksitSayisi" type="xs:int" />
+      <xs:element minOccurs="0" name="TaksitTanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaksitTutari" type="xs:double" />
+      <xs:element minOccurs="0" name="TaksitTutariStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToplamTutar" type="xs:double" />
+      <xs:element minOccurs="0" name="ToplamTutarStr" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunOdemeSecenekler" nillable="true" type="tns:UrunOdemeSecenekler" />
+  <xs:complexType name="ArrayOfSiparisUrunDurumlari">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SiparisUrunDurumlari" nillable="true" type="tns:SiparisUrunDurumlari" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSiparisUrunDurumlari" nillable="true" type="tns:ArrayOfSiparisUrunDurumlari" />
+  <xs:complexType name="SiparisUrunDurumlari">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Islem" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SiparisUrunDurumlari" nillable="true" type="tns:SiparisUrunDurumlari" />
+  <xs:complexType name="ArrayOfUrunKategori">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunKategori" nillable="true" type="tns:UrunKategori" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunKategori" nillable="true" type="tns:ArrayOfUrunKategori" />
+  <xs:complexType name="UrunKategori">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KategoriID" type="xs:int" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunKategori" nillable="true" type="tns:UrunKategori" />
+  <xs:complexType name="ArrayOfUrunEtiket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunEtiket" nillable="true" type="tns:UrunEtiket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunEtiket" nillable="true" type="tns:ArrayOfUrunEtiket" />
+  <xs:complexType name="UrunEtiket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EtiketID" type="xs:int" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunEtiket" nillable="true" type="tns:UrunEtiket" />
+  <xs:complexType name="ArrayOfIlgiliUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IlgiliUrun" nillable="true" type="tns:IlgiliUrun" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIlgiliUrun" nillable="true" type="tns:ArrayOfIlgiliUrun" />
+  <xs:complexType name="IlgiliUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IlgiliUrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IlgiliUrun" nillable="true" type="tns:IlgiliUrun" />
+  <xs:complexType name="UrunBarkodGuncelleRequest">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Barkodlar" nillable="true" type="q13:ArrayOfstring" />
+      <xs:element minOccurs="0" name="UrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunBarkodGuncelleRequest" nillable="true" type="tns:UrunBarkodGuncelleRequest" />
+  <xs:complexType name="UrunBarkodGuncelleResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UrunBarkodGuncelleResponse" nillable="true" type="tns:UrunBarkodGuncelleResponse" />
+  <xs:complexType name="Takim">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KampanyaAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KampanyaBaslangic" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KampanyaBitis" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TakimUrunleri" nillable="true" type="tns:ArrayOfTakimUrun" />
+      <xs:element minOccurs="0" name="TedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Takim" nillable="true" type="tns:Takim" />
+  <xs:complexType name="ArrayOfTakimUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TakimUrun" nillable="true" type="tns:TakimUrun" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTakimUrun" nillable="true" type="tns:ArrayOfTakimUrun" />
+  <xs:complexType name="TakimUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet" type="xs:double" />
+      <xs:element minOccurs="0" name="Secili" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="TedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TakimUrun" nillable="true" type="tns:TakimUrun" />
+  <xs:complexType name="ArrayOfUrunKategoriGuncelleByStokKoduRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunKategoriGuncelleByStokKoduRequest" nillable="true" type="tns:UrunKategoriGuncelleByStokKoduRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunKategoriGuncelleByStokKoduRequest" nillable="true" type="tns:ArrayOfUrunKategoriGuncelleByStokKoduRequest" />
+  <xs:complexType name="UrunKategoriGuncelleByStokKoduRequest">
+    <xs:sequence>
+      <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="KategoriIdList" nillable="true" type="q14:ArrayOfint" />
+      <xs:element minOccurs="0" name="StokKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunKategoriGuncelleByStokKoduRequest" nillable="true" type="tns:UrunKategoriGuncelleByStokKoduRequest" />
+  <xs:complexType name="UrunKategoriGuncelleByStokKoduResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UrunKategoriGuncelleByStokKoduResponse" nillable="true" type="tns:UrunKategoriGuncelleByStokKoduResponse" />
+  <xs:complexType name="Urun360ResimYukleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dosya" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="EslestirmeTipi" type="tns:WebUrunResimEslestirmeTipi" />
+      <xs:element minOccurs="0" name="Resim" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ResimAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResimSira" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Urun360ResimYukleRequest" nillable="true" type="tns:Urun360ResimYukleRequest" />
+  <xs:complexType name="Urun360ResimYukleResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Urun360ResimYukleResponse" nillable="true" type="tns:Urun360ResimYukleResponse" />
+  <xs:complexType name="UrunResimListeleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:int" />
+      <xs:element minOccurs="0" name="EklemeTarihiBas" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EklemeTarihiSon" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunResimListeleRequest" nillable="true" type="tns:UrunResimListeleRequest" />
+  <xs:complexType name="UrunResimListeleResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UrunResimList" nillable="true" type="tns:ArrayOfUrunResim" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UrunResimListeleResponse" nillable="true" type="tns:UrunResimListeleResponse" />
+  <xs:complexType name="ArrayOfUrunResim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunResim" nillable="true" type="tns:UrunResim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunResim" nillable="true" type="tns:ArrayOfUrunResim" />
+  <xs:complexType name="UrunResim">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Resimler" nillable="true" type="tns:ArrayOfResim" />
+      <xs:element minOccurs="0" name="UrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunResim" nillable="true" type="tns:UrunResim" />
+  <xs:complexType name="ArrayOfResim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Resim" nillable="true" type="tns:Resim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResim" nillable="true" type="tns:ArrayOfResim" />
+  <xs:complexType name="Resim">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EklemeTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ResimAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Resim" nillable="true" type="tns:Resim" />
+  <xs:complexType name="SaveKombinUrunRequestV2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KombinUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UrunKartiIdList" nillable="true" type="q15:ArrayOfint" />
+      <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UrunKartiTedarikciKoduList" nillable="true" type="q16:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveKombinUrunRequestV2" nillable="true" type="tns:SaveKombinUrunRequestV2" />
+  <xs:complexType name="SaveKombinUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveKombinUrunResponse" nillable="true" type="tns:SaveKombinUrunResponse" />
+  <xs:complexType name="DeleteKombinUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinKampanyaId" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteKombinUrunRequest" nillable="true" type="tns:DeleteKombinUrunRequest" />
+  <xs:complexType name="DeleteKombinUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteKombinUrunResponse" nillable="true" type="tns:DeleteKombinUrunResponse" />
+  <xs:complexType name="SelectKombinUrunFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aktif" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectKombinUrunFiltre" nillable="true" type="tns:SelectKombinUrunFiltre" />
+  <xs:complexType name="SelectKombinurunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KombinUrunList" nillable="true" type="tns:ArrayOfKombinUrun" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectKombinurunResponse" nillable="true" type="tns:SelectKombinurunResponse" />
+  <xs:complexType name="ArrayOfKombinUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KombinUrun" nillable="true" type="tns:KombinUrun" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKombinUrun" nillable="true" type="tns:ArrayOfKombinUrun" />
+  <xs:complexType name="KombinUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="KombinUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KombinUrun" nillable="true" type="tns:KombinUrun" />
+  <xs:complexType name="SaveTamamlayiciUrunRequestV2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TamamlayiciUrunList" nillable="true" type="tns:ArrayOfTamamlayiciUrun" />
+      <xs:element minOccurs="0" name="UrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveTamamlayiciUrunRequestV2" nillable="true" type="tns:SaveTamamlayiciUrunRequestV2" />
+  <xs:complexType name="ArrayOfTamamlayiciUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TamamlayiciUrun" nillable="true" type="tns:TamamlayiciUrun" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTamamlayiciUrun" nillable="true" type="tns:ArrayOfTamamlayiciUrun" />
+  <xs:complexType name="TamamlayiciUrun">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TamamlayiciUrun" nillable="true" type="tns:TamamlayiciUrun" />
+  <xs:complexType name="SaveTamamlayiciUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveTamamlayiciUrunResponse" nillable="true" type="tns:SaveTamamlayiciUrunResponse" />
+  <xs:complexType name="DeleteTamamlayiciUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteTamamlayiciUrunRequest" nillable="true" type="tns:DeleteTamamlayiciUrunRequest" />
+  <xs:complexType name="DeleteTamamlayiciUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteTamamlayiciUrunResponse" nillable="true" type="tns:DeleteTamamlayiciUrunResponse" />
+  <xs:complexType name="SelectTamamlayiciUrunFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TamamlayiciUrunTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectTamamlayiciUrunFiltre" nillable="true" type="tns:SelectTamamlayiciUrunFiltre" />
+  <xs:complexType name="SelectTamamlayiciUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TamamlayiciUrunList" nillable="true" type="tns:ArrayOfTamamlayiciUrun" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectTamamlayiciUrunResponse" nillable="true" type="tns:SelectTamamlayiciUrunResponse" />
+  <xs:complexType name="SaveTakimUrunRequestV2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KampanyaAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KampanyaBaslangic" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KampanyaBitis" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TakimUrunList" nillable="true" type="tns:ArrayOfTakimUrunV2" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveTakimUrunRequestV2" nillable="true" type="tns:SaveTakimUrunRequestV2" />
+  <xs:complexType name="ArrayOfTakimUrunV2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TakimUrunV2" nillable="true" type="tns:TakimUrunV2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTakimUrunV2" nillable="true" type="tns:ArrayOfTakimUrunV2" />
+  <xs:complexType name="TakimUrunV2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Secili" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="TakimUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="TakimUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TakimUrunV2" nillable="true" type="tns:TakimUrunV2" />
+  <xs:complexType name="SaveTakimUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveTakimUrunResponse" nillable="true" type="tns:SaveTakimUrunResponse" />
+  <xs:complexType name="DeleteTakimUrunRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="TakimUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="TakimUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteTakimUrunRequest" nillable="true" type="tns:DeleteTakimUrunRequest" />
+  <xs:complexType name="DeleteTakimUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteTakimUrunResponse" nillable="true" type="tns:DeleteTakimUrunResponse" />
+  <xs:complexType name="SelectTakimUrunFiltre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="TakimUrunKartiId" type="xs:int" />
+      <xs:element minOccurs="0" name="TakimUrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectTakimUrunFiltre" nillable="true" type="tns:SelectTakimUrunFiltre" />
+  <xs:complexType name="SelectTakimUrunResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TakimUrunList" nillable="true" type="tns:ArrayOfTakimUrunV2" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectTakimUrunResponse" nillable="true" type="tns:SelectTakimUrunResponse" />
+  <xs:complexType name="UrunDetayTab">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Icerik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrunDetayTab" nillable="true" type="tns:UrunDetayTab" />
+  <xs:complexType name="SaveUrunDetayTabResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EklenenId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveUrunDetayTabResponse" nillable="true" type="tns:SaveUrunDetayTabResponse" />
+  <xs:complexType name="DeleteUrunDetayTabResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteUrunDetayTabResponse" nillable="true" type="tns:DeleteUrunDetayTabResponse" />
+  <xs:complexType name="SelectUrunDetayTabRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiID" type="xs:int" />
+      <xs:element minOccurs="0" name="UrunKartiTedarikciKodu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectUrunDetayTabRequest" nillable="true" type="tns:SelectUrunDetayTabRequest" />
+  <xs:complexType name="SelectUrunDetayTabResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UrunDetayTabList" nillable="true" type="tns:ArrayOfUrunDetayTab" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectUrunDetayTabResponse" nillable="true" type="tns:SelectUrunDetayTabResponse" />
+  <xs:complexType name="ArrayOfUrunDetayTab">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrunDetayTab" nillable="true" type="tns:UrunDetayTab" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrunDetayTab" nillable="true" type="tns:ArrayOfUrunDetayTab" />
+  <xs:complexType name="UpdateUrunDetayTabRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Icerik" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sira" type="xs:int" />
+      <xs:element minOccurs="0" name="Tanim" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateUrunDetayTabRequest" nillable="true" type="tns:UpdateUrunDetayTabRequest" />
+  <xs:complexType name="UpdateUrunDetayTabResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServisResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateUrunDetayTabResponse" nillable="true" type="tns:UpdateUrunDetayTabResponse" />
+</xs:schema>

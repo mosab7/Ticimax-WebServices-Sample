@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CustomServis" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/CustomServis.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/CustomServis.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/CustomServis.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/CustomServis.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomServis_SaveEntegrasyonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEntegrasyonId" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SaveEntegrasyonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEntegrasyonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectEntegrasyonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEntegrasyonId" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectEntegrasyonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEntegrasyonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_DeleteEntegrasyonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEntegrasyonId" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_DeleteEntegrasyonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEntegrasyonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectMailList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMailList" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectMailList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectEntegrasyon_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEntegrasyon" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectEntegrasyon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEntegrasyonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectKargoDesiFiyat_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKargoDesiFiyat" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectKargoDesiFiyat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKargoDesiFiyatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GuncelleKargoDesiFiyat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuncelleKargoDesiFiyat" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GuncelleKargoDesiFiyat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuncelleKargoDesiFiyatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectUlkeler_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUlkeler" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectUlkeler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUlkelerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectIller_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIller" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectIller_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectIlceler_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIlceler" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectIlceler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIlcelerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectKargoFirmalari_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKargoFirmalari" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectKargoFirmalari_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectKargoFirmalariResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectIadeTalebi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIadeTalebi" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectIadeTalebi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIadeTalebiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_UpdateIadeTalebi_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIadeTalebi" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_UpdateIadeTalebi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIadeTalebiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetTaksitSecenek_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaksitSecenek" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetTaksitSecenek_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaksitSecenekResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetKampanya_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKampanya" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetKampanya_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKampanyaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetFavoriUrunler_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriUrunler" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetFavoriUrunler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriUrunlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_AddFavoriUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFavoriUrun" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_AddFavoriUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFavoriUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_RemoveFavoriUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFavoriUrun" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_RemoveFavoriUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFavoriUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetFiyatAlarmUrunler_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFiyatAlarmUrunler" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetFiyatAlarmUrunler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFiyatAlarmUrunlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_AddFiyatAlarmUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFiyatAlarmUrun" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_AddFiyatAlarmUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFiyatAlarmUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_RemoveFiyatAlarmUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFiyatAlarmUrun" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_RemoveFiyatAlarmUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFiyatAlarmUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetStokAlarmUrunler_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStokAlarmUrunler" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetStokAlarmUrunler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStokAlarmUrunlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_AddStokAlarmUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStokAlarmUrun" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_AddStokAlarmUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStokAlarmUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_RemoveStokAlarmUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStokAlarmUrun" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_RemoveStokAlarmUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStokAlarmUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenu" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SaveMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMenu" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SaveMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_DeleteMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMenu" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_DeleteMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SaveSupportTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupportTicket" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SaveSupportTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupportTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetSupportTicketSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportTicketSubject" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetSupportTicketSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportTicketSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SaveSupportTicketAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupportTicketAnswer" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SaveSupportTicketAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupportTicketAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetSupportTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportTickets" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetSupportTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetSupportTicketMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportTicketMessages" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetSupportTicketMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportTicketMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetCampaingBanners_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaingBanners" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetCampaingBanners_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaingBannersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetKampanyaV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKampanyaV2" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_GetKampanyaV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKampanyaV2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectSiparisKaynaklari_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisKaynaklari" />
+  </wsdl:message>
+  <wsdl:message name="ICustomServis_SelectSiparisKaynaklari_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisKaynaklariResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomServis">
+    <wsdl:operation name="SaveEntegrasyonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SaveEntegrasyonId" message="tns:ICustomServis_SaveEntegrasyonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SaveEntegrasyonIdResponse" message="tns:ICustomServis_SaveEntegrasyonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEntegrasyonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectEntegrasyonId" message="tns:ICustomServis_SelectEntegrasyonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectEntegrasyonIdResponse" message="tns:ICustomServis_SelectEntegrasyonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntegrasyonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/DeleteEntegrasyonId" message="tns:ICustomServis_DeleteEntegrasyonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/DeleteEntegrasyonIdResponse" message="tns:ICustomServis_DeleteEntegrasyonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMailList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectMailList" message="tns:ICustomServis_SelectMailList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectMailListResponse" message="tns:ICustomServis_SelectMailList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEntegrasyon">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectEntegrasyon" message="tns:ICustomServis_SelectEntegrasyon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectEntegrasyonResponse" message="tns:ICustomServis_SelectEntegrasyon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectKargoDesiFiyat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectKargoDesiFiyat" message="tns:ICustomServis_SelectKargoDesiFiyat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectKargoDesiFiyatResponse" message="tns:ICustomServis_SelectKargoDesiFiyat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuncelleKargoDesiFiyat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GuncelleKargoDesiFiyat" message="tns:ICustomServis_GuncelleKargoDesiFiyat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GuncelleKargoDesiFiyatResponse" message="tns:ICustomServis_GuncelleKargoDesiFiyat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUlkeler">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectUlkeler" message="tns:ICustomServis_SelectUlkeler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectUlkelerResponse" message="tns:ICustomServis_SelectUlkeler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIller">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectIller" message="tns:ICustomServis_SelectIller_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectIllerResponse" message="tns:ICustomServis_SelectIller_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIlceler">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectIlceler" message="tns:ICustomServis_SelectIlceler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectIlcelerResponse" message="tns:ICustomServis_SelectIlceler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectKargoFirmalari">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectKargoFirmalari" message="tns:ICustomServis_SelectKargoFirmalari_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectKargoFirmalariResponse" message="tns:ICustomServis_SelectKargoFirmalari_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIadeTalebi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectIadeTalebi" message="tns:ICustomServis_SelectIadeTalebi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectIadeTalebiResponse" message="tns:ICustomServis_SelectIadeTalebi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIadeTalebi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/UpdateIadeTalebi" message="tns:ICustomServis_UpdateIadeTalebi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/UpdateIadeTalebiResponse" message="tns:ICustomServis_UpdateIadeTalebi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaksitSecenek">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetTaksitSecenek" message="tns:ICustomServis_GetTaksitSecenek_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetTaksitSecenekResponse" message="tns:ICustomServis_GetTaksitSecenek_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKampanya">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetKampanya" message="tns:ICustomServis_GetKampanya_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetKampanyaResponse" message="tns:ICustomServis_GetKampanya_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriUrunler">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetFavoriUrunler" message="tns:ICustomServis_GetFavoriUrunler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetFavoriUrunlerResponse" message="tns:ICustomServis_GetFavoriUrunler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFavoriUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/AddFavoriUrun" message="tns:ICustomServis_AddFavoriUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/AddFavoriUrunResponse" message="tns:ICustomServis_AddFavoriUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFavoriUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/RemoveFavoriUrun" message="tns:ICustomServis_RemoveFavoriUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/RemoveFavoriUrunResponse" message="tns:ICustomServis_RemoveFavoriUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFiyatAlarmUrunler">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetFiyatAlarmUrunler" message="tns:ICustomServis_GetFiyatAlarmUrunler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetFiyatAlarmUrunlerResponse" message="tns:ICustomServis_GetFiyatAlarmUrunler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFiyatAlarmUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/AddFiyatAlarmUrun" message="tns:ICustomServis_AddFiyatAlarmUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/AddFiyatAlarmUrunResponse" message="tns:ICustomServis_AddFiyatAlarmUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFiyatAlarmUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/RemoveFiyatAlarmUrun" message="tns:ICustomServis_RemoveFiyatAlarmUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/RemoveFiyatAlarmUrunResponse" message="tns:ICustomServis_RemoveFiyatAlarmUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStokAlarmUrunler">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetStokAlarmUrunler" message="tns:ICustomServis_GetStokAlarmUrunler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetStokAlarmUrunlerResponse" message="tns:ICustomServis_GetStokAlarmUrunler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStokAlarmUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/AddStokAlarmUrun" message="tns:ICustomServis_AddStokAlarmUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/AddStokAlarmUrunResponse" message="tns:ICustomServis_AddStokAlarmUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStokAlarmUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/RemoveStokAlarmUrun" message="tns:ICustomServis_RemoveStokAlarmUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/RemoveStokAlarmUrunResponse" message="tns:ICustomServis_RemoveStokAlarmUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetMenu" message="tns:ICustomServis_GetMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetMenuResponse" message="tns:ICustomServis_GetMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SaveMenu" message="tns:ICustomServis_SaveMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SaveMenuResponse" message="tns:ICustomServis_SaveMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/DeleteMenu" message="tns:ICustomServis_DeleteMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/DeleteMenuResponse" message="tns:ICustomServis_DeleteMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupportTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SaveSupportTicket" message="tns:ICustomServis_SaveSupportTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SaveSupportTicketResponse" message="tns:ICustomServis_SaveSupportTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportTicketSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetSupportTicketSubject" message="tns:ICustomServis_GetSupportTicketSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetSupportTicketSubjectResponse" message="tns:ICustomServis_GetSupportTicketSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupportTicketAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SaveSupportTicketAnswer" message="tns:ICustomServis_SaveSupportTicketAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SaveSupportTicketAnswerResponse" message="tns:ICustomServis_SaveSupportTicketAnswer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetSupportTickets" message="tns:ICustomServis_GetSupportTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetSupportTicketsResponse" message="tns:ICustomServis_GetSupportTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportTicketMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetSupportTicketMessages" message="tns:ICustomServis_GetSupportTicketMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetSupportTicketMessagesResponse" message="tns:ICustomServis_GetSupportTicketMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaingBanners">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetCampaingBanners" message="tns:ICustomServis_GetCampaingBanners_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetCampaingBannersResponse" message="tns:ICustomServis_GetCampaingBanners_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKampanyaV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/GetKampanyaV2" message="tns:ICustomServis_GetKampanyaV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/GetKampanyaV2Response" message="tns:ICustomServis_GetKampanyaV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisKaynaklari">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomServis/SelectSiparisKaynaklari" message="tns:ICustomServis_SelectSiparisKaynaklari_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomServis/SelectSiparisKaynaklariResponse" message="tns:ICustomServis_SelectSiparisKaynaklari_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICustomServis" type="tns:ICustomServis">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveEntegrasyonId">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SaveEntegrasyonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEntegrasyonId">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectEntegrasyonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntegrasyonId">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/DeleteEntegrasyonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMailList">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectMailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEntegrasyon">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectEntegrasyon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectKargoDesiFiyat">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectKargoDesiFiyat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuncelleKargoDesiFiyat">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GuncelleKargoDesiFiyat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUlkeler">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectUlkeler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIller">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectIller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIlceler">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectIlceler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectKargoFirmalari">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectKargoFirmalari" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIadeTalebi">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectIadeTalebi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIadeTalebi">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/UpdateIadeTalebi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaksitSecenek">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetTaksitSecenek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKampanya">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetKampanya" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriUrunler">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetFavoriUrunler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFavoriUrun">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/AddFavoriUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFavoriUrun">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/RemoveFavoriUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFiyatAlarmUrunler">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetFiyatAlarmUrunler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFiyatAlarmUrun">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/AddFiyatAlarmUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFiyatAlarmUrun">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/RemoveFiyatAlarmUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStokAlarmUrunler">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetStokAlarmUrunler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStokAlarmUrun">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/AddStokAlarmUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStokAlarmUrun">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/RemoveStokAlarmUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMenu">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SaveMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenu">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/DeleteMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupportTicket">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SaveSupportTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportTicketSubject">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetSupportTicketSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupportTicketAnswer">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SaveSupportTicketAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportTickets">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetSupportTickets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportTicketMessages">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetSupportTicketMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaingBanners">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetCampaingBanners" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKampanyaV2">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/GetKampanyaV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisKaynaklari">
+      <soap:operation soapAction="http://tempuri.org/ICustomServis/SelectSiparisKaynaklari" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomServis">
+    <wsdl:port name="BasicHttpBinding_ICustomServis" binding="tns:BasicHttpBinding_ICustomServis">
+      <soap:address location="http://cagla.tcmx.dev/servis/CustomServis.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

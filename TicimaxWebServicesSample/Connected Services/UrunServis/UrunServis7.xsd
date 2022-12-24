@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ticimax.BL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ticimax.BL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="BLEnums.VaryasyonTuru">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Diger" />
+      <xs:enumeration value="Renk" />
+      <xs:enumeration value="Beden" />
+      <xs:enumeration value="Cinsiyet" />
+      <xs:enumeration value="Malzeme" />
+      <xs:enumeration value="Desen" />
+      <xs:enumeration value="Durum" />
+      <xs:enumeration value="Sezın" />
+      <xs:enumeration value="YasGrubu" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BLEnums.VaryasyonTuru" nillable="true" type="tns:BLEnums.VaryasyonTuru" />
+</xs:schema>

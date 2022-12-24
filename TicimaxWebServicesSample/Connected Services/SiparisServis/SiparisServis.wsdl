@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SiparisServis" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/SiparisServis.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/SiparisServis.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/SiparisServis.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/SiparisServis.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://cagla.tcmx.dev/servis/SiparisServis.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Ticimax.BL" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISiparisServis_SelectSiparis_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparis" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisOdeme_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisOdeme" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisOdeme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisOdemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectCariOdeme_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCariOdeme" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectCariOdeme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCariOdemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisUrun_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisUrun" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisUrun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisUrunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisKampanya_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisKampanya" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisKampanya_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisKampanyaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveSiparis_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSiparis" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveSiparis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSiparisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisAktarildi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisAktarildi" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisAktarildi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisAktarildiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisAktarildiV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisAktarildiV2" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisAktarildiV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisAktarildiV2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisAktarildiIptal_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisAktarildiIptal" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisAktarildiIptal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisAktarildiIptalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisKargoyaVerildi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisKargoyaVerildi" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisKargoyaVerildi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisKargoyaVerildiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisTeslimEdildi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisTeslimEdildi" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisTeslimEdildi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisTeslimEdildiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetFaturaNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFaturaNo" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetFaturaNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFaturaNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveKargoTakipNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKargoTakipNo" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveKargoTakipNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveKargoTakipNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSepet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSepet" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSepet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSepetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_HediyeCekiUygula_InputMessage">
+    <wsdl:part name="parameters" element="tns:HediyeCekiUygula" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_HediyeCekiUygula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HediyeCekiUygulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisDurum_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisDurum" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisDurum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisDurumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisUrunDurum_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisUrunDurum" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisUrunDurum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisUrunDurumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveSiparisKargoPaket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSiparisKargoPaket" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveSiparisKargoPaket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSiparisKargoPaketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SiparisPaketleKargoyaGonder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SiparisPaketleKargoyaGonder" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SiparisPaketleKargoyaGonder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SiparisPaketleKargoyaGonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisUrunDurumlari_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisUrunDurumlari" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisUrunDurumlari_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisUrunDurumlariResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisKargoPaket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisKargoPaket" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisKargoPaket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisKargoPaketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveSiparisKargoPaketKargoTakipNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSiparisKargoPaketKargoTakipNo" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveSiparisKargoPaketKargoTakipNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSiparisKargoPaketKargoTakipNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetKargoSecenek_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKargoSecenek" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetKargoSecenek_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKargoSecenekResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectWebSepet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWebSepet" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectWebSepet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWebSepetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_CreateSepet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSepet" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_CreateSepet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSepetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_UpdateSepet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSepet" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_UpdateSepet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSepetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetSepet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSepet" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetSepet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSepetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetOdemeTipleri_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOdemeTipleri" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetOdemeTipleri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOdemeTipleriResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSepetKampanya_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSepetKampanya" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSepetKampanya_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSepetKampanyaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetPaketlemeDurumlari_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaketlemeDurumlari" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetPaketlemeDurumlari_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaketlemeDurumlariResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetMagazalar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMagazalar" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_GetMagazalar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMagazalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisPaketlemeDurum_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisPaketlemeDurum" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisPaketlemeDurum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisPaketlemeDurumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisKargoFirmaId_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisKargoFirmaId" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisKargoFirmaId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisKargoFirmaIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisOdemeDurum_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisOdemeDurum" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetSiparisOdemeDurum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSiparisOdemeDurumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectEFatura_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEFatura" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectEFatura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEFaturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveEFatura_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEFatura" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveEFatura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEFaturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetEFaturaIptal_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEFaturaIptal" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SetEFaturaIptal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEFaturaIptalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectIadeOdeme_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIadeOdeme" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectIadeOdeme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIadeOdemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveBekleyenArama_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBekleyenArama" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SaveBekleyenArama_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBekleyenAramaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisDurumlari_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisDurumlari" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectSiparisDurumlari_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSiparisDurumlariResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectOdemeTipleri_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOdemeTipleri" />
+  </wsdl:message>
+  <wsdl:message name="ISiparisServis_SelectOdemeTipleri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOdemeTipleriResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISiparisServis">
+    <wsdl:operation name="SelectSiparis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparis" message="tns:ISiparisServis_SelectSiparis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisResponse" message="tns:ISiparisServis_SelectSiparis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisOdeme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisOdeme" message="tns:ISiparisServis_SelectSiparisOdeme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisOdemeResponse" message="tns:ISiparisServis_SelectSiparisOdeme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCariOdeme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectCariOdeme" message="tns:ISiparisServis_SelectCariOdeme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectCariOdemeResponse" message="tns:ISiparisServis_SelectCariOdeme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisUrun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisUrun" message="tns:ISiparisServis_SelectSiparisUrun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisUrunResponse" message="tns:ISiparisServis_SelectSiparisUrun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisKampanya">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisKampanya" message="tns:ISiparisServis_SelectSiparisKampanya_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisKampanyaResponse" message="tns:ISiparisServis_SelectSiparisKampanya_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSiparis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SaveSiparis" message="tns:ISiparisServis_SaveSiparis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SaveSiparisResponse" message="tns:ISiparisServis_SaveSiparis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisAktarildi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisAktarildi" message="tns:ISiparisServis_SetSiparisAktarildi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisAktarildiResponse" message="tns:ISiparisServis_SetSiparisAktarildi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisAktarildiV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisAktarildiV2" message="tns:ISiparisServis_SetSiparisAktarildiV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisAktarildiV2Response" message="tns:ISiparisServis_SetSiparisAktarildiV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisAktarildiIptal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisAktarildiIptal" message="tns:ISiparisServis_SetSiparisAktarildiIptal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisAktarildiIptalResponse" message="tns:ISiparisServis_SetSiparisAktarildiIptal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisKargoyaVerildi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisKargoyaVerildi" message="tns:ISiparisServis_SetSiparisKargoyaVerildi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisKargoyaVerildiResponse" message="tns:ISiparisServis_SetSiparisKargoyaVerildi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisTeslimEdildi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisTeslimEdildi" message="tns:ISiparisServis_SetSiparisTeslimEdildi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisTeslimEdildiResponse" message="tns:ISiparisServis_SetSiparisTeslimEdildi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFaturaNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetFaturaNo" message="tns:ISiparisServis_SetFaturaNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetFaturaNoResponse" message="tns:ISiparisServis_SetFaturaNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveKargoTakipNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SaveKargoTakipNo" message="tns:ISiparisServis_SaveKargoTakipNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SaveKargoTakipNoResponse" message="tns:ISiparisServis_SaveKargoTakipNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSepet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSepet" message="tns:ISiparisServis_SelectSepet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSepetResponse" message="tns:ISiparisServis_SelectSepet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HediyeCekiUygula">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/HediyeCekiUygula" message="tns:ISiparisServis_HediyeCekiUygula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/HediyeCekiUygulaResponse" message="tns:ISiparisServis_HediyeCekiUygula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisDurum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisDurum" message="tns:ISiparisServis_SetSiparisDurum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisDurumResponse" message="tns:ISiparisServis_SetSiparisDurum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisUrunDurum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisUrunDurum" message="tns:ISiparisServis_SetSiparisUrunDurum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisUrunDurumResponse" message="tns:ISiparisServis_SetSiparisUrunDurum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSiparisKargoPaket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SaveSiparisKargoPaket" message="tns:ISiparisServis_SaveSiparisKargoPaket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SaveSiparisKargoPaketResponse" message="tns:ISiparisServis_SaveSiparisKargoPaket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SiparisPaketleKargoyaGonder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SiparisPaketleKargoyaGonder" message="tns:ISiparisServis_SiparisPaketleKargoyaGonder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SiparisPaketleKargoyaGonderResponse" message="tns:ISiparisServis_SiparisPaketleKargoyaGonder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisUrunDurumlari">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisUrunDurumlari" message="tns:ISiparisServis_SelectSiparisUrunDurumlari_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisUrunDurumlariResponse" message="tns:ISiparisServis_SelectSiparisUrunDurumlari_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisKargoPaket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisKargoPaket" message="tns:ISiparisServis_SelectSiparisKargoPaket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisKargoPaketResponse" message="tns:ISiparisServis_SelectSiparisKargoPaket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSiparisKargoPaketKargoTakipNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SaveSiparisKargoPaketKargoTakipNo" message="tns:ISiparisServis_SaveSiparisKargoPaketKargoTakipNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SaveSiparisKargoPaketKargoTakipNoResponse" message="tns:ISiparisServis_SaveSiparisKargoPaketKargoTakipNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKargoSecenek">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/GetKargoSecenek" message="tns:ISiparisServis_GetKargoSecenek_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/GetKargoSecenekResponse" message="tns:ISiparisServis_GetKargoSecenek_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectWebSepet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectWebSepet" message="tns:ISiparisServis_SelectWebSepet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectWebSepetResponse" message="tns:ISiparisServis_SelectWebSepet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSepet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/CreateSepet" message="tns:ISiparisServis_CreateSepet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/CreateSepetResponse" message="tns:ISiparisServis_CreateSepet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSepet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/UpdateSepet" message="tns:ISiparisServis_UpdateSepet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/UpdateSepetResponse" message="tns:ISiparisServis_UpdateSepet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSepet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/GetSepet" message="tns:ISiparisServis_GetSepet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/GetSepetResponse" message="tns:ISiparisServis_GetSepet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOdemeTipleri">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/GetOdemeTipleri" message="tns:ISiparisServis_GetOdemeTipleri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/GetOdemeTipleriResponse" message="tns:ISiparisServis_GetOdemeTipleri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSepetKampanya">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSepetKampanya" message="tns:ISiparisServis_SetSepetKampanya_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSepetKampanyaResponse" message="tns:ISiparisServis_SetSepetKampanya_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaketlemeDurumlari">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/GetPaketlemeDurumlari" message="tns:ISiparisServis_GetPaketlemeDurumlari_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/GetPaketlemeDurumlariResponse" message="tns:ISiparisServis_GetPaketlemeDurumlari_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMagazalar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/GetMagazalar" message="tns:ISiparisServis_GetMagazalar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/GetMagazalarResponse" message="tns:ISiparisServis_GetMagazalar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisPaketlemeDurum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisPaketlemeDurum" message="tns:ISiparisServis_SetSiparisPaketlemeDurum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisPaketlemeDurumResponse" message="tns:ISiparisServis_SetSiparisPaketlemeDurum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisKargoFirmaId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisKargoFirmaId" message="tns:ISiparisServis_SetSiparisKargoFirmaId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisKargoFirmaIdResponse" message="tns:ISiparisServis_SetSiparisKargoFirmaId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisOdemeDurum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisOdemeDurum" message="tns:ISiparisServis_SetSiparisOdemeDurum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetSiparisOdemeDurumResponse" message="tns:ISiparisServis_SetSiparisOdemeDurum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEFatura">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectEFatura" message="tns:ISiparisServis_SelectEFatura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectEFaturaResponse" message="tns:ISiparisServis_SelectEFatura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEFatura">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SaveEFatura" message="tns:ISiparisServis_SaveEFatura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SaveEFaturaResponse" message="tns:ISiparisServis_SaveEFatura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEFaturaIptal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SetEFaturaIptal" message="tns:ISiparisServis_SetEFaturaIptal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SetEFaturaIptalResponse" message="tns:ISiparisServis_SetEFaturaIptal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIadeOdeme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectIadeOdeme" message="tns:ISiparisServis_SelectIadeOdeme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectIadeOdemeResponse" message="tns:ISiparisServis_SelectIadeOdeme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBekleyenArama">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SaveBekleyenArama" message="tns:ISiparisServis_SaveBekleyenArama_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SaveBekleyenAramaResponse" message="tns:ISiparisServis_SaveBekleyenArama_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisDurumlari">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisDurumlari" message="tns:ISiparisServis_SelectSiparisDurumlari_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectSiparisDurumlariResponse" message="tns:ISiparisServis_SelectSiparisDurumlari_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectOdemeTipleri">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISiparisServis/SelectOdemeTipleri" message="tns:ISiparisServis_SelectOdemeTipleri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISiparisServis/SelectOdemeTipleriResponse" message="tns:ISiparisServis_SelectOdemeTipleri_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISiparisServis" type="tns:ISiparisServis">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectSiparis">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSiparis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisOdeme">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSiparisOdeme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCariOdeme">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectCariOdeme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisUrun">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSiparisUrun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisKampanya">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSiparisKampanya" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSiparis">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SaveSiparis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisAktarildi">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisAktarildi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisAktarildiV2">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisAktarildiV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisAktarildiIptal">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisAktarildiIptal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisKargoyaVerildi">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisKargoyaVerildi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisTeslimEdildi">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisTeslimEdildi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFaturaNo">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetFaturaNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveKargoTakipNo">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SaveKargoTakipNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSepet">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSepet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HediyeCekiUygula">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/HediyeCekiUygula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisDurum">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisDurum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisUrunDurum">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisUrunDurum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSiparisKargoPaket">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SaveSiparisKargoPaket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SiparisPaketleKargoyaGonder">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SiparisPaketleKargoyaGonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisUrunDurumlari">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSiparisUrunDurumlari" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisKargoPaket">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSiparisKargoPaket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSiparisKargoPaketKargoTakipNo">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SaveSiparisKargoPaketKargoTakipNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKargoSecenek">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/GetKargoSecenek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWebSepet">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectWebSepet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSepet">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/CreateSepet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSepet">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/UpdateSepet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSepet">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/GetSepet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOdemeTipleri">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/GetOdemeTipleri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSepetKampanya">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSepetKampanya" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaketlemeDurumlari">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/GetPaketlemeDurumlari" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMagazalar">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/GetMagazalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisPaketlemeDurum">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisPaketlemeDurum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisKargoFirmaId">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisKargoFirmaId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSiparisOdemeDurum">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetSiparisOdemeDurum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEFatura">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectEFatura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEFatura">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SaveEFatura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEFaturaIptal">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SetEFaturaIptal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIadeOdeme">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectIadeOdeme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBekleyenArama">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SaveBekleyenArama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSiparisDurumlari">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectSiparisDurumlari" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectOdemeTipleri">
+      <soap:operation soapAction="http://tempuri.org/ISiparisServis/SelectOdemeTipleri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SiparisServis">
+    <wsdl:port name="BasicHttpBinding_ISiparisServis" binding="tns:BasicHttpBinding_ISiparisServis">
+      <soap:address location="http://cagla.tcmx.dev/servis/SiparisServis.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
